@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Box, Container, Flex, Grid, GridItem, Heading, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Container, Flex, Grid, GridItem, Heading, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text, useColorMode } from "@chakra-ui/react";
 import { SectionDescription, SectionSubtitle, SectionTitle, SkillCard } from "@/fragments";
-import { skillList } from "@/constants";
+import { skillList, toolsList } from "@/constants";
 import SectionLayout from "@/layouts/SectionLayout";
 
 function SkillsSectionComponent(): React.JSX.Element {
@@ -42,33 +42,78 @@ function SkillsSectionComponent(): React.JSX.Element {
               shadow: "2xl",
             }}
           >
-            <Heading
-              as="h4"
-              color="primary"
-              size="md"
-              textAlign="center"
-              marginBottom={6}
+            <Tabs
+              align="center"
+              variant="unstyled"
             >
-              Tech Stack
-            </Heading>
+              <TabList
+                marginBottom={6}
+                width="fit-content"
+              >
+                <Tab
+                  fontWeight="semibold"
+                  fontSize={{ base: "1em", lg: "1.1em" }}
+                  _selected={{ color: "primary" }}
+                >
+                  Tech Stack
+                </Tab>
+                <Tab
+                  fontWeight="semibold"
+                  fontSize={{ base: "1em", lg: "1.1em" }}
+                  _selected={{ color: "primary" }}
+                >
+                  Tools
+                </Tab>
+              </TabList>
 
-            <Grid
-              templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)", xl: "repeat(5, 1fr)" }}
-              placeItems="center"
-              gap={8}
-            >
-              {skillList.map(
-                ({ skillIcon, title, level }, index): React.ReactNode => (
-                  <GridItem key={`Skills - ${index} : ${title}`}>
-                    <SkillCard
-                      skillIcon={skillIcon}
-                      title={title}
-                      level={level}
-                    />
-                  </GridItem>
-                )
-              )}
-            </Grid>
+              <TabIndicator
+                height="2px"
+                marginTop="-1.5rem"
+                backgroundColor="primary"
+              />
+
+              <TabPanels>
+                <TabPanel>
+                  <Grid
+                    templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)", xl: "repeat(5, 1fr)" }}
+                    placeItems="center"
+                    gap={8}
+                  >
+                    {skillList.map(
+                      ({ skillIcon, title, level }, index): React.ReactNode => (
+                        <GridItem key={`Skills - ${index} : ${title}`}>
+                          <SkillCard
+                            skillIcon={skillIcon}
+                            title={title}
+                            level={level}
+                          />
+                        </GridItem>
+                      )
+                    )}
+                  </Grid>
+                </TabPanel>
+
+                <TabPanel>
+                  <Grid
+                    templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)", xl: "repeat(5, 1fr)" }}
+                    placeItems="center"
+                    gap={8}
+                  >
+                    {toolsList.map(
+                      ({ skillIcon, title, level }, index): React.ReactNode => (
+                        <GridItem key={`Skills - ${index} : ${title}`}>
+                          <SkillCard
+                            skillIcon={skillIcon}
+                            title={title}
+                            level={level}
+                          />
+                        </GridItem>
+                      )
+                    )}
+                  </Grid>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </GridItem>
 
           {/* Skills Section Subtitle & Description */}
@@ -82,12 +127,9 @@ function SkillsSectionComponent(): React.JSX.Element {
               rowGap={{ base: 3, lg: 5 }}
               textAlign={{ base: "center", lg: "end" }}
             >
-              <SectionSubtitle subtitle="Tech Stack & Tools" />
+              <SectionSubtitle>Tech Stack & Tools</SectionSubtitle>
 
-              <SectionDescription
-                textAlign={{ lg: "end" }}
-                description="There are some tech stack and tools that i've learned and experienced"
-              />
+              <SectionDescription textAlign={{ lg: "end" }}>There are some tech stack and tools that i&apos;ve learned and experienced</SectionDescription>
             </Flex>
           </GridItem>
         </Grid>

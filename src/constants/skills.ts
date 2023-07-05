@@ -37,7 +37,7 @@ export const skillList: Skill[] = [
     level: "Basic",
   },
   {
-    skillIcon: "/assets/svg/react.svg",
+    skillIcon: "/assets/svg/react native.svg",
     title: "React Native",
     level: "Basic",
   },
@@ -74,6 +74,39 @@ export const skillList: Skill[] = [
   {
     skillIcon: "/assets/svg/laravel.svg",
     title: "Laravel",
+    level: "Basic",
+  },
+];
+
+export const toolsList: Skill[] = [
+  {
+    skillIcon: "/assets/svg/visual studio code.svg",
+    title: "Visual Studio Code",
+    level: "Basic",
+  },
+  {
+    skillIcon: "/assets/svg/github.svg",
+    title: "Github",
+    level: "Basic",
+  },
+  {
+    skillIcon: "/assets/svg/figma.svg",
+    title: "Figma",
+    level: "Basic",
+  },
+  {
+    skillIcon: "/assets/svg/xampp.svg",
+    title: "Xampp",
+    level: "Basic",
+  },
+  {
+    skillIcon: "/assets/svg/android studio.svg",
+    title: "Android Studio",
+    level: "Basic",
+  },
+  {
+    skillIcon: "/assets/svg/git.svg",
+    title: "Git",
     level: "Basic",
   },
 ];

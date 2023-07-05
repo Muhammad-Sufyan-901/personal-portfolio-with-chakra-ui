@@ -1,11 +1,9 @@
 import * as React from "react";
 import { Text, type TextProps } from "@chakra-ui/react";
 
-type SectionDescriptionProps = TextProps & {
-  description: string;
-};
+type SectionDescriptionProps = TextProps;
 
-export default function SectionDescription({ description, ...props }: SectionDescriptionProps): React.JSX.Element {
+export default function SectionDescription({ children, ...props }: SectionDescriptionProps): React.JSX.Element {
   return (
     <Text
       fontSize={{ base: "0.9em", md: "1em" }}
@@ -14,7 +12,7 @@ export default function SectionDescription({ description, ...props }: SectionDes
       marginX={{ base: "auto", lg: 0 }}
       {...props}
     >
-      {description}
+      {children}
     </Text>
   );
 }
