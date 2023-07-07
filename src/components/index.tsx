@@ -4,3 +4,4 @@ export { default as FooterComponent } from "./FooterComponent";
 export { default as HomeSectionComponent } from "./HomeSectionComponent";
 export { default as AboutSectionComponent } from "./AboutSectionComponent";
 export { default as SkillsSectionComponent } from "./SkillsSectionComponent";
+export { default as EducationSectionComponent } from "./EducationSectionComponent";

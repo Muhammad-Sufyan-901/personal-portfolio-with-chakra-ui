@@ -6,3 +6,5 @@ export { default as SectionSubtitle } from "./SectionSubtitle";
 export { default as SectionDescription } from "./SectionDescription";
 export { default as AboutExperienceCard } from "./AboutExperienceCard";
 export { default as SkillCard } from "./SkillCard";
+export { default as EducationListItem } from "./EducationListItem";
+export { default as AwardListItem } from "./AwardListItem";

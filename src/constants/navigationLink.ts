@@ -14,7 +14,7 @@ export const navigationLinkList: NavigationLink[] = [
     href: "skills",
   },
   {
-    title: "Educations & Awards",
+    title: "Educations",
     href: "educations",
   },
   {

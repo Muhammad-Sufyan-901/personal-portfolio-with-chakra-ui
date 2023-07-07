@@ -7,3 +7,5 @@ export * from "./navigationLink";
 export * from "./socialMedia";
 export * from "./experience";
 export * from "./skill";
+export * from "./education";
+export * from "./award";
