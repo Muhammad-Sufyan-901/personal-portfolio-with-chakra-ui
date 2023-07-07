@@ -76,7 +76,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                 <TabPanel>
                   <Grid
                     templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)", xl: "repeat(5, 1fr)" }}
-                    placeItems="center"
+                    justifyContent="center"
                     gap={8}
                   >
                     {skillList.map(
@@ -96,7 +96,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                 <TabPanel>
                   <Grid
                     templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)", xl: "repeat(5, 1fr)" }}
-                    placeItems="center"
+                    justifyContent="center"
                     gap={8}
                   >
                     {toolsList.map(
