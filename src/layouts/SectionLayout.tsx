@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Flex, Show } from "@chakra-ui/react";
+import { Box, Flex, Show, Tooltip } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
 import { navigationLinkList, socialMediaList } from "@/constants";
 
@@ -64,22 +64,24 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
           >
             {navigationLinkList.map(
               ({ title, href }, index): React.ReactNode => (
-                <Link
+                <Tooltip
+                  label={title}
                   key={`#${title} - ${index}`}
-                  href={`#${href}`}
-                  scroll={false}
+                  placement="left"
                 >
-                  <Box
-                    width={2}
-                    height={2}
-                    borderRadius="full"
-                    backgroundColor={activeSectionIndicator === href ? "primary" : "secondary"}
-                    transition="all 300ms"
-                    _hover={{
-                      transform: "translateX(-0.25rem)",
-                    }}
-                  />
-                </Link>
+                  <Link
+                    href={`#${href}`}
+                    scroll={false}
+                  >
+                    <Box
+                      width={2}
+                      height={2}
+                      borderRadius="full"
+                      backgroundColor={activeSectionIndicator === href ? "primary" : "secondary"}
+                      transition="all 300ms"
+                    />
+                  </Link>
+                </Tooltip>
               )
             )}
           </Flex>
