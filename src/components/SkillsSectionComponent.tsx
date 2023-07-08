@@ -42,6 +42,7 @@ function SkillsSectionComponent(): React.JSX.Element {
               shadow: "2xl",
             }}
           >
+            {/* Skills Section Tech Stack & Tools Tabs */}
             <Tabs
               align="center"
               variant="unstyled"
@@ -73,6 +74,7 @@ function SkillsSectionComponent(): React.JSX.Element {
               />
 
               <TabPanels>
+                {/* Skills Section Tech Stack Content */}
                 <TabPanel>
                   <Grid
                     templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)", xl: "repeat(5, 1fr)" }}
@@ -93,6 +95,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                   </Grid>
                 </TabPanel>
 
+                {/* Skills Section Tools Content */}
                 <TabPanel>
                   <Grid
                     templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)", xl: "repeat(5, 1fr)" }}
