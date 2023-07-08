@@ -7,7 +7,7 @@ export const educationList: Education[] = [
     years: "2023 - Present",
   },
   {
-    school: "TI Global Vocational High School",
+    school: "TI Bali Global Vocational High School",
     competence: "Software Engineer",
     years: "2020 - 2023",
   },
