@@ -13,7 +13,7 @@ export default function SectionTitle({ title }: SectionTitleProps): React.JSX.El
         as="h1"
         bgGradient="linear(to-t, transparent, text)"
         backgroundClip="text"
-        fontSize="7xl"
+        fontSize={{ base: "6xl", md: "7xl" }}
         fontWeight="extrabold"
         marginBottom={8}
         opacity={0.3}
@@ -25,8 +25,7 @@ export default function SectionTitle({ title }: SectionTitleProps): React.JSX.El
       {/* Title Text Content */}
       <Heading
         as="h2"
-        color="text"
-        fontSize="2.5em"
+        fontSize={{ base: "2.5em", lg: "3em" }}
         fontWeight="bold"
         transform={{ base: "translateY(-5.5rem)", lg: "translateY(-5rem)" }}
         zIndex={1}

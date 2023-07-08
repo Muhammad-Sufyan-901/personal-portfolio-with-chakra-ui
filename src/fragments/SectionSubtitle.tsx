@@ -8,6 +8,7 @@ export default function SectionSubtitle({ children, ...props }: SectionSubtitleP
     <Heading
       as="h3"
       color="primary"
+      textAlign={{ base: "center", lg: "start" }}
       {...props}
     >
       {children}
