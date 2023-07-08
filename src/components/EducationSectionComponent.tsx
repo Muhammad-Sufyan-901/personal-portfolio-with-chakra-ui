@@ -22,7 +22,6 @@ function EducationSectionComponent(): React.JSX.Element {
 
       {/* Education Section Content */}
       <Container
-        marginX="auto"
         marginTop={{ base: "1rem", lg: "2.5rem" }}
         maxWidth={{ base: "container.lg", lg: "75rem" }}
       >

@@ -20,7 +20,6 @@ function SkillsSectionComponent(): React.JSX.Element {
 
       {/* Skills Section Content */}
       <Container
-        marginX="auto"
         marginTop={{ base: "1rem", lg: "2.5rem" }}
         maxWidth={{ base: "container.lg", xl: "75rem" }}
       >

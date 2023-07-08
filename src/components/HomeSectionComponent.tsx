@@ -27,7 +27,6 @@ function HomeSectionComponent(): React.JSX.Element {
         maxWidth={{ base: "container.lg", xl: "75rem" }}
         paddingX={{ base: "4", xl: 0 }}
         paddingTop="4rem"
-        marginX="auto"
       >
         <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}>
           {/* Home Section Text Info Content */}

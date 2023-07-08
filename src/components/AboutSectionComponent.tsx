@@ -21,10 +21,7 @@ function AboutSectionComponent(): React.JSX.Element {
       <SectionTitle title="About Me" />
 
       {/* About Section Content Container */}
-      <Container
-        marginX="auto"
-        maxWidth={{ base: "container.lg", xl: "75rem" }}
-      >
+      <Container maxWidth={{ base: "container.lg", xl: "75rem" }}>
         <Grid
           gap={{ base: "2.5rem", lg: "15%" }}
           templateColumns={{ base: "1fr", lg: "35% 50%" }}
