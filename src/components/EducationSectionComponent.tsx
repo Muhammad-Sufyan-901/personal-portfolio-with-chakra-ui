@@ -3,8 +3,8 @@ import { Badge, Box, Container, Flex, Grid, GridItem, useColorMode } from "@chak
 import { AiFillTrophy } from "react-icons/ai";
 import { MdOutlineSchool } from "react-icons/md";
 import { AwardListItem, EducationListItem, SectionDescription, SectionSubtitle, SectionTitle } from "@/fragments";
-import SectionLayout from "@/layouts/SectionLayout";
 import { awardList, educationList } from "@/constants";
+import SectionLayout from "@/layouts/SectionLayout";
 
 function EducationSectionComponent(): React.JSX.Element {
   const { colorMode } = useColorMode();
@@ -17,8 +17,10 @@ function EducationSectionComponent(): React.JSX.Element {
       paddingTop="7.5rem"
       paddingBottom="1rem"
     >
+      {/* Education Section Title */}
       <SectionTitle title="Educations" />
 
+      {/* Education Section Content */}
       <Container
         marginX="auto"
         marginTop={{ base: "1rem", lg: "2.5rem" }}
@@ -28,6 +30,7 @@ function EducationSectionComponent(): React.JSX.Element {
           templateColumns={{ base: "1fr", lg: "25% 70%" }}
           gap={{ base: 10, lg: "5%" }}
         >
+          {/* Education Section Subtitle & Description */}
           <GridItem>
             <Flex
               height="100%"
@@ -44,6 +47,7 @@ function EducationSectionComponent(): React.JSX.Element {
             </Flex>
           </GridItem>
 
+          {/* Education Section Educations & Awards Content */}
           <GridItem
             backgroundColor={colorMode === "dark" ? "#132347" : "white"}
             shadow="lg"
@@ -63,6 +67,7 @@ function EducationSectionComponent(): React.JSX.Element {
               templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
               gap={{ base: "4rem", lg: 8 }}
             >
+              {/* Education Section Educations Content */}
               <GridItem>
                 <Badge
                   color="white"
@@ -92,6 +97,7 @@ function EducationSectionComponent(): React.JSX.Element {
                 </Box>
               </GridItem>
 
+              {/* Education Section Awards Content */}
               <GridItem>
                 <Badge
                   color="white"
