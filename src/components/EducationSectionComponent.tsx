@@ -38,11 +38,10 @@ function EducationSectionComponent(): React.JSX.Element {
               justifyContent="center"
               alignItems="center"
               rowGap={{ base: 3, lg: 5 }}
-              textAlign={{ base: "center", lg: "start" }}
             >
               <SectionSubtitle>Educations & Awards</SectionSubtitle>
 
-              <SectionDescription textAlign={{ lg: "start" }}>There are some formal education & awards that i&apos;ve reached below</SectionDescription>
+              <SectionDescription>There are some formal education & awards that i&apos;ve reached below</SectionDescription>
             </Flex>
           </GridItem>
 

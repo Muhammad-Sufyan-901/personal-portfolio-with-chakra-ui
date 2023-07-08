@@ -127,11 +127,10 @@ function SkillsSectionComponent(): React.JSX.Element {
               justifyContent="center"
               alignItems="center"
               rowGap={{ base: 3, lg: 5 }}
-              textAlign={{ base: "center", lg: "end" }}
             >
-              <SectionSubtitle>Tech Stack & Tools</SectionSubtitle>
+              <SectionSubtitle textAlign={{ lg: "end" }}>Tech Stack & Tools</SectionSubtitle>
 
-              <SectionDescription textAlign={{ lg: "end" }}>There are some tech stack and tools that i&apos;ve learned and experienced</SectionDescription>
+              <SectionDescription textAlign={{ base: "center", lg: "end" }}>There are some tech stack and tools that i&apos;ve learned and experienced</SectionDescription>
             </Flex>
           </GridItem>
         </Grid>
