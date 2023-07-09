@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box } from "@chakra-ui/react";
-import { HomeSectionComponent, AboutSectionComponent, SkillsSectionComponent, EducationSectionComponent } from "@/components";
+import { HomeSectionComponent, AboutSectionComponent, SkillsSectionComponent, EducationSectionComponent, ExperienceSectionComponent } from "@/components";
 
 export default function MainPage(): React.JSX.Element {
   return (
@@ -12,6 +12,7 @@ export default function MainPage(): React.JSX.Element {
       <AboutSectionComponent />
       <SkillsSectionComponent />
       <EducationSectionComponent />
+      <ExperienceSectionComponent />
     </Box>
   );
 }

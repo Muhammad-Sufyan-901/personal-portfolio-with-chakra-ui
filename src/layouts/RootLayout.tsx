@@ -1,6 +1,8 @@
 import * as React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, useColorMode } from "@chakra-ui/react";
+import { Global } from "@emotion/react";
 import { HeaderComponent, FooterComponent } from "@/components";
+import { globalSliderStyles } from "@/utils";
 import HeaderMetadata from "./HeaderMetadata";
 
 type RootLayoutProps = {
@@ -8,6 +10,8 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps): React.JSX.Element {
+  const { colorMode } = useColorMode();
+
   return (
     <React.Fragment>
       <HeaderMetadata />
@@ -19,6 +23,8 @@ export default function RootLayout({ children }: RootLayoutProps): React.JSX.Ele
 
         <FooterComponent />
       </Box>
+
+      <Global styles={globalSliderStyles(colorMode)} />
     </React.Fragment>
   );
 }

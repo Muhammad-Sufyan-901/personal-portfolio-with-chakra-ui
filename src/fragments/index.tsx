@@ -8,3 +8,4 @@ export { default as AboutExperienceCard } from "./AboutExperienceCard";
 export { default as SkillCard } from "./SkillCard";
 export { default as EducationListItem } from "./EducationListItem";
 export { default as AwardListItem } from "./AwardListItem";
+export { default as WorkExperienceCard } from "./WorkExperienceCard";
