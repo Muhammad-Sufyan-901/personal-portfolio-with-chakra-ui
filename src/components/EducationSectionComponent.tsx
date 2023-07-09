@@ -51,7 +51,7 @@ function EducationSectionComponent(): React.JSX.Element {
             shadow="lg"
             borderRadius="lg"
             padding={10}
-            width={{ base: "80%", lg: "100%" }}
+            width={{ base: "90%", lg: "100%" }}
             marginX={{ base: "auto", lg: 0 }}
             order={{ base: 2, lg: 1 }}
             transition="all 300ms"
