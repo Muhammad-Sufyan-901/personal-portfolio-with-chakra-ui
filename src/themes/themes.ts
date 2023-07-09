@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { backgroundColor, primaryColor, secondaryColor, textColor, fonts, styles } from "@/styles";
+import { backgroundColor, primaryColor, secondaryColor, textColor, fonts, styles, cardBackgroundColor } from "@/styles";
 import type { ThemeColor } from "@/types";
 
 export const colors: ThemeColor = {
@@ -7,6 +7,7 @@ export const colors: ThemeColor = {
   secondary: secondaryColor,
   background: backgroundColor,
   text: textColor,
+  card: cardBackgroundColor,
 };
 
 export const chakraThemes = extendTheme({

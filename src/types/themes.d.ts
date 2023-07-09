@@ -5,4 +5,5 @@ export interface ThemeColor {
   secondary: Color;
   background: Color;
   text: Color;
+  card: Color;
 }

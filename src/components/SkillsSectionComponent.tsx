@@ -29,7 +29,7 @@ function SkillsSectionComponent(): React.JSX.Element {
         >
           {/* Skills Section Tech Stack & Tools Content */}
           <GridItem
-            backgroundColor={colorMode === "dark" ? "#132347" : "white"}
+            backgroundColor="card"
             shadow="lg"
             borderRadius="lg"
             padding={10}

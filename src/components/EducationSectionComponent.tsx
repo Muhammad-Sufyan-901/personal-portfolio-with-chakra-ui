@@ -47,7 +47,7 @@ function EducationSectionComponent(): React.JSX.Element {
 
           {/* Education Section Educations & Awards Content */}
           <GridItem
-            backgroundColor={colorMode === "dark" ? "#132347" : "white"}
+            backgroundColor="card"
             shadow="lg"
             borderRadius="lg"
             padding={10}
