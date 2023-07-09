@@ -1,13 +1,11 @@
 import * as React from "react";
 import Image from "next/image";
-import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import type { Skill } from "@/types";
 
 type SkillCardProps = Skill;
 
 export default function SkillCard({ skillIcon, title, level }: SkillCardProps): React.JSX.Element {
-  const { colorMode } = useColorMode();
-
   return (
     <Flex
       direction="column"
@@ -17,7 +15,7 @@ export default function SkillCard({ skillIcon, title, level }: SkillCardProps): 
       <Box
         padding={5}
         borderRadius="full"
-        backgroundColor={colorMode === "dark" ? "#132347" : "white"}
+        backgroundColor="card"
         shadow="md"
         transition="all 300ms"
         _hover={{
