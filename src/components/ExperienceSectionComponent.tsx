@@ -45,7 +45,7 @@ function ExperienceSectionComponent(): React.JSX.Element {
                 spaceBetween: 24,
               },
               768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 32,
               },
               1024: {
