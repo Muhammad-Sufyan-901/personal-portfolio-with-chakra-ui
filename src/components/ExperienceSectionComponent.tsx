@@ -18,9 +18,12 @@ function ExperienceSectionComponent(): React.JSX.Element {
       paddingTop="7.5rem"
       paddingBottom="1rem"
     >
+      {/* Experience Section Title */}
       <SectionTitle title="Experiences" />
 
+      {/* Experience Section Content */}
       <Container maxWidth={{ base: "container.lg", lg: "75rem" }}>
+        {/* Experience Section Subtitle & Description */}
         <Flex
           direction="column"
           rowGap={{ base: 3, lg: 5 }}
@@ -29,10 +32,12 @@ function ExperienceSectionComponent(): React.JSX.Element {
           <SectionDescription>I&apos;m also experienced at some website development and software testing that i learn for over 1 years will described below</SectionDescription>
         </Flex>
 
+        {/* Experience Section Work Experiences Container */}
         <Box
           marginTop={12}
           paddingBottom={16}
         >
+          {/* Experience Section Work Experiences Slider */}
           <Swiper
             modules={[Navigation]}
             navigation={{
@@ -56,6 +61,7 @@ function ExperienceSectionComponent(): React.JSX.Element {
             style={{ paddingBottom: 64 }}
             grabCursor
           >
+            {/* Experience Section Work Experiences Slider Content */}
             <Box>
               {workExperienceList.map(
                 ({ jobDesk, companyName, years, jobStatus, jobDescription, techStack }, index): React.ReactNode => (
@@ -73,6 +79,7 @@ function ExperienceSectionComponent(): React.JSX.Element {
               )}
             </Box>
 
+            {/* Experience Section Work Experiences Navigation Button */}
             <Box>
               <BsChevronRight className="swiper-button-next" />
               <BsChevronLeft className="swiper-button-prev" />
