@@ -18,7 +18,7 @@ export const workExperienceList: WorkExperience[] = [
     techStack: ["/assets/svg/angular.svg", "/assets/svg/typescript.svg", "/assets/svg/graphql.svg"],
   },
   {
-    jobDesk: "Quality assurance",
+    jobDesk: "Quality Assurance",
     companyName: "ZettaByte Pte Ltd",
     years: "2021 - 2022",
     jobStatus: "Internship",
