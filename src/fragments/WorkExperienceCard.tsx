@@ -8,7 +8,7 @@ type WorkExperienceCardProps = WorkExperience;
 export default function WorkExperienceCard({ jobDesk, companyName, years, jobStatus, jobDescription, techStack }: WorkExperienceCardProps): React.JSX.Element {
   return (
     <Box
-      height="25rem"
+      height={{ base: "100%", sm: "25rem" }}
       backgroundColor="card"
       shadow="2xl"
       borderRadius="xl"

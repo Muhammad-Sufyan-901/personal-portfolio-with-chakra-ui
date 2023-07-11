@@ -22,7 +22,7 @@ export const workExperienceList: WorkExperience[] = [
     companyName: "ZettaByte Pte Ltd",
     years: "2021 - 2022",
     jobStatus: "Internship",
-    jobDescription: "Responsible for debugging and testing on the ADMTC and EDH platforms",
+    jobDescription: "Responsible for debugging some features and testing on the ADMTC and EDH platforms",
     techStack: ["/assets/svg/jira.svg", "/assets/svg/docs.svg"],
   },
 ];
