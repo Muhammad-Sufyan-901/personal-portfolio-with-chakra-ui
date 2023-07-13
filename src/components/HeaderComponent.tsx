@@ -4,14 +4,14 @@ import { Box, Container, Flex, Hide, Show, useColorMode, useDisclosure } from "@
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { navigationLinkList, profileData } from "@/constants";
-import MobileHeaderComponent from "./MobileHeaderComponent";
 import { ThemeToggleButton } from "@/fragments";
+import MobileHeaderComponent from "./MobileHeaderComponent";
 
 export default function HeaderComponent(): React.JSX.Element {
   const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
   const [activeNavigationLink, setActiveNavigationLink] = React.useState<string>("home");
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onClose, onOpen, onToggle } = useDisclosure();
 
   const { name } = profileData;
 
@@ -134,12 +134,13 @@ export default function HeaderComponent(): React.JSX.Element {
       </Box>
 
       {/* Mobile Header Navigation (Tablet & Phone Only) */}
-      {isOpen ? (
-        <MobileHeaderComponent
-          isMobileNavigationOpened={isOpen}
-          toggleMobileNavigation={onToggle}
-        />
-      ) : null}
+      <MobileHeaderComponent
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        activeHref={activeNavigationLink}
+        setActiveHref={setActiveNavigationLink}
+      />
     </React.Fragment>
   );
 }
