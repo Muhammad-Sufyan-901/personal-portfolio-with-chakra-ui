@@ -7,8 +7,6 @@ import { awardList, educationList } from "@/constants";
 import SectionLayout from "@/layouts/SectionLayout";
 
 function EducationSectionComponent(): React.JSX.Element {
-  const { colorMode } = useColorMode();
-
   return (
     <Box
       as="section"

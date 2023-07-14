@@ -1,12 +1,11 @@
 import * as React from "react";
-import { Box, Container, Flex, Grid, GridItem, Heading, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Container, Flex, Grid, GridItem, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { FaCode, FaPencilRuler } from "react-icons/fa";
 import { SectionDescription, SectionSubtitle, SectionTitle, SkillCard } from "@/fragments";
 import { skillList, toolsList } from "@/constants";
 import SectionLayout from "@/layouts/SectionLayout";
 
 function SkillsSectionComponent(): React.JSX.Element {
-  const { colorMode } = useColorMode();
-
   return (
     <Box
       as="section"
@@ -54,14 +53,18 @@ function SkillsSectionComponent(): React.JSX.Element {
                   fontWeight="semibold"
                   fontSize={{ base: "1em", lg: "1.1em" }}
                   _selected={{ color: "primary" }}
+                  columnGap={2}
                 >
+                  <FaCode />
                   Tech Stack
                 </Tab>
                 <Tab
                   fontWeight="semibold"
                   fontSize={{ base: "1em", lg: "1.1em" }}
                   _selected={{ color: "primary" }}
+                  columnGap={2}
                 >
+                  <FaPencilRuler />
                   Tools
                 </Tab>
               </TabList>
