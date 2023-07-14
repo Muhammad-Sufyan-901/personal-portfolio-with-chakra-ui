@@ -70,7 +70,7 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                   placement="left"
                 >
                   <Link
-                    href={`#${href}`}
+                    href={`/#${href}`}
                     scroll={false}
                   >
                     <Box

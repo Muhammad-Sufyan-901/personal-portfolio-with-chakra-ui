@@ -79,7 +79,7 @@ export default function HeaderComponent(): React.JSX.Element {
                   ({ title, href }, index): React.ReactNode => (
                     <Link
                       key={`#${title} - ${index}`}
-                      href={`#${href}`}
+                      href={`/#${href}`}
                       color={activeNavigationLink === href ? "primary" : "text"}
                       fontWeight="medium"
                       fontSize="1rem"
