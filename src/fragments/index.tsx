@@ -9,3 +9,5 @@ export { default as SkillCard } from "./SkillCard";
 export { default as EducationListItem } from "./EducationListItem";
 export { default as AwardListItem } from "./AwardListItem";
 export { default as WorkExperienceCard } from "./WorkExperienceCard";
+export { default as PortfolioCard } from "./PortfolioCard";
+export { default as PortfolioModal } from "./PortfolioModal";

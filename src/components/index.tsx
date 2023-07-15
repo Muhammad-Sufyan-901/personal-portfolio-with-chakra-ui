@@ -6,3 +6,5 @@ export { default as AboutSectionComponent } from "./AboutSectionComponent";
 export { default as SkillsSectionComponent } from "./SkillsSectionComponent";
 export { default as EducationSectionComponent } from "./EducationSectionComponent";
 export { default as ExperienceSectionComponent } from "./ExperienceSectionComponent";
+export { default as PortfolioSectionComponent } from "./PortfolioSectionComponent";
+export { default as PortfolioPageSectionComponent } from "./PortfolioPageSectionComponent";
