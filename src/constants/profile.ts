@@ -4,7 +4,7 @@ export const profileData: Profile = {
   name: "Muhammad Sufyan",
   region: "Indonesia",
   CV: "/assets/pdf/Muhammad Sufyan CV.pdf",
-  divisions: ["Frontend Developer", "Software Tester"],
+  divisions: ["Frontend Developer", "Software Tester", "Mobile Developer"],
   pictures: ["/assets/images/home-profile.png", "/assets/images/about-profile.jpeg"],
   descriptions: [
     "I create stunning website for your business, Intermediate experienced in web design and development.",
