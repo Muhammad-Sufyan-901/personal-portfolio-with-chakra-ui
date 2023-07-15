@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Badge, Box, Container, Flex, Grid, GridItem, useColorMode } from "@chakra-ui/react";
+import { Badge, Box, Container, Flex, Grid, GridItem } from "@chakra-ui/react";
 import { AiFillTrophy } from "react-icons/ai";
 import { MdOutlineSchool } from "react-icons/md";
 import { AwardListItem, EducationListItem, SectionDescription, SectionSubtitle, SectionTitle } from "@/fragments";
