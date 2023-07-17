@@ -201,4 +201,149 @@ export const portfolioList: Portfolio[] = [
       },
     ],
   },
+  {
+    title: "XPense Landing Page",
+    imageThumbnail: "/assets/images/project-10.jpg",
+    description:
+      "XPense is a website that I created using React JS and Tailwind CSS. This website is about a company that provides cloud server services. This website allows users to choose, customize, and manage their cloud servers according to their needs and budget. This website also has features such as billing, support, and analytics. This website aims to offer users a reliable and affordable solution to host their websites and applications on the cloud.",
+    livePreviewURL: "https://xpense-landing-page-kappa.vercel.app/",
+    repositoryURL: "https://github.com/Muhammad-Sufyan-901/xpense-landing-page",
+    techStack: [
+      {
+        tech: "React JS",
+        logo: "/assets/svg/react.svg",
+        color: "orange.500",
+      },
+      {
+        tech: "Tailwind",
+        logo: "/assets/svg/tailwind.svg",
+        color: "orange.500",
+      },
+    ],
+  },
+  {
+    title: "Elecar Landing Page",
+    imageThumbnail: "/assets/images/project-11.jpg",
+    description:
+      "Elecar is a website that I created using HTML, CSS, and JavaScript technologies. This website is about a company that sells electric cars. This website allows users to browse, compare, and order various models of electric cars that are eco-friendly, efficient, and stylish. This website also has features such as testimonials, FAQs, and contact. This website aims to promote and sell the electric cars of the company.",
+    livePreviewURL: "https://elecar-landing-page.vercel.app/",
+    repositoryURL: "https://github.com/Muhammad-Sufyan-901/elecar-landing-page",
+    techStack: [
+      {
+        tech: "HTML",
+        logo: "/assets/svg/html.svg",
+        color: "orange.500",
+      },
+      {
+        tech: "CSS",
+        logo: "/assets/svg/css.svg",
+        color: "blue.500",
+      },
+      {
+        tech: "JavaScript",
+        logo: "/assets/svg/javascript.svg",
+        color: "yellow.300",
+      },
+    ],
+  },
+  {
+    title: "Coffee Landing Page",
+    imageThumbnail: "/assets/images/project-12.jpg",
+    description:
+      "Coffee is a website that I created using HTML, CSS, and JavaScript. This website is about a cafe that serves delicious coffee, tea, and pastries. This website allows users to view the menu, location, and hours of the cafe. This website also has features such as online ordering, loyalty program, and feedback. This website aims to attract and satisfy customers with the quality and variety of the cafe’s products and services.",
+    livePreviewURL: "https://coffee-landing-page-xi.vercel.app/",
+    repositoryURL: "https://github.com/Muhammad-Sufyan-901/coffee-landing-page",
+    techStack: [
+      {
+        tech: "HTML",
+        logo: "/assets/svg/html.svg",
+        color: "orange.500",
+      },
+      {
+        tech: "CSS",
+        logo: "/assets/svg/css.svg",
+        color: "blue.500",
+      },
+      {
+        tech: "JavaScript",
+        logo: "/assets/svg/javascript.svg",
+        color: "yellow.300",
+      },
+    ],
+  },
+  {
+    title: "Holux Landing Page",
+    imageThumbnail: "/assets/images/project-13.jpg",
+    description:
+      "Holux is a website that I created using HTML, CSS, and JavaScript. This website is about a real estate company that sells properties. This website allows users to browse, filter, and inquire about various properties such as houses, apartments, and lands. This website also has features such as valuation, financing, and consultation. This website aims to provide users with a professional and trustworthy service to buy or sell their properties.",
+    livePreviewURL: "https://holux-landing-page.vercel.app/",
+    repositoryURL: "https://github.com/Muhammad-Sufyan-901/holux-landing-page",
+    techStack: [
+      {
+        tech: "HTML",
+        logo: "/assets/svg/html.svg",
+        color: "orange.500",
+      },
+      {
+        tech: "CSS",
+        logo: "/assets/svg/css.svg",
+        color: "blue.500",
+      },
+      {
+        tech: "JavaScript",
+        logo: "/assets/svg/javascript.svg",
+        color: "yellow.300",
+      },
+    ],
+  },
+  {
+    title: "Shop Landing Page",
+    imageThumbnail: "/assets/images/project-14.jpg",
+    description:
+      "Shop is a website that I created using HTML, CSS, and JavaScript. This website is about a boutique that sells fashionable clothes, accessories, and shoes. This website allows users to view, add to cart, and checkout the products that they like. This website also has features such as reviews, ratings, and discounts. This website aims to attract and delight customers with the quality and style of the boutique’s products.",
+    livePreviewURL: "https://shop-landing-page-six.vercel.app/",
+    repositoryURL: "https://github.com/Muhammad-Sufyan-901/shop-landing-page",
+    techStack: [
+      {
+        tech: "HTML",
+        logo: "/assets/svg/html.svg",
+        color: "orange.500",
+      },
+      {
+        tech: "CSS",
+        logo: "/assets/svg/css.svg",
+        color: "blue.500",
+      },
+      {
+        tech: "JavaScript",
+        logo: "/assets/svg/javascript.svg",
+        color: "yellow.300",
+      },
+    ],
+  },
+  {
+    title: "Berotot Landing Page",
+    imageThumbnail: "/assets/images/project-15.jpg",
+    description:
+      "Berotot is a website that I created using HTML, CSS, and JavaScript technologies. This website is about a gym that offers various fitness programs, equipment, and trainers. This website allows users to view the gym’s facilities, schedule, and membership plans. This website also has features such as online booking, payment, and feedback. This website aims to attract and motivate customers with the quality and diversity of the gym’s services.",
+    livePreviewURL: "https://berotot-landing-page.vercel.app/",
+    repositoryURL: "https://github.com/Muhammad-Sufyan-901/berotot-landing-page",
+    techStack: [
+      {
+        tech: "HTML",
+        logo: "/assets/svg/html.svg",
+        color: "orange.500",
+      },
+      {
+        tech: "CSS",
+        logo: "/assets/svg/css.svg",
+        color: "blue.500",
+      },
+      {
+        tech: "JavaScript",
+        logo: "/assets/svg/javascript.svg",
+        color: "yellow.300",
+      },
+    ],
+  },
 ];
