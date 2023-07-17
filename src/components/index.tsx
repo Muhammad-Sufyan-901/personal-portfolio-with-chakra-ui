@@ -8,3 +8,4 @@ export { default as EducationSectionComponent } from "./EducationSectionComponen
 export { default as ExperienceSectionComponent } from "./ExperienceSectionComponent";
 export { default as PortfolioSectionComponent } from "./PortfolioSectionComponent";
 export { default as PortfolioPageSectionComponent } from "./PortfolioPageSectionComponent";
+export { default as GetInTouchComponent } from "./GetInTouchComponent";
