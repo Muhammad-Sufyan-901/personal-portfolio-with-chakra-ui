@@ -13,6 +13,8 @@ export default function WorkExperienceCard({ jobDesk, companyName, years, jobSta
       shadow="2xl"
       borderRadius="xl"
       padding={10}
+      borderBottomWidth="2px"
+      borderColor="primary"
     >
       <Flex
         direction="column"
@@ -59,7 +61,7 @@ export default function WorkExperienceCard({ jobDesk, companyName, years, jobSta
           )}
         </Flex>
 
-        <Text color="secondary">{years}</Text>
+        <Text color="secondary">Since {years}</Text>
 
         <Text textAlign="justify">{jobDescription}</Text>
       </Flex>
