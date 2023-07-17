@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Badge, Box, ButtonGroup, Card, CardBody, CardFooter, Flex, Heading, Text, useDisclosure } from "@chakra-ui/react";
+import { Badge, Box, ButtonGroup, Card, CardBody, CardFooter, Flex, Heading, Text, useColorMode, useDisclosure } from "@chakra-ui/react";
 import { BsArrowRightCircleFill, BsFillEyeFill } from "react-icons/bs";
 import { Image } from "@chakra-ui/next-js";
 import { truncateText, truncateList } from "@/utils";
@@ -11,6 +11,7 @@ type PortfolioCardProps = Portfolio;
 
 export default function PortfolioCard({ title, imageThumbnail, description, livePreviewURL, repositoryURL, techStack }: PortfolioCardProps): React.JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode } = useColorMode();
 
   const truncatedDescription: string = truncateText(description);
   const truncatedTechStackList: TechStack[] = truncateList(techStack, 0, 3);
@@ -113,6 +114,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
               _hover={{
                 borderColor: "text",
                 backgroundColor: "text",
+                color: colorMode === "dark" ? "primary" : "white",
               }}
               rightIcon={<BsFillEyeFill />}
             >

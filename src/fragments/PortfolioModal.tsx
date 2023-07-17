@@ -118,6 +118,7 @@ export default function PortfolioModal({ title, imageThumbnail, description, rep
             onClick={onClose}
             variant="solid"
             backgroundColor="red.500"
+            color="white"
           >
             Close
           </Button>
