@@ -13,7 +13,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode } = useColorMode();
 
-  const truncatedDescription: string = truncateText(description);
+  const truncatedDescription: string = truncateText(description, 75);
   const truncatedTechStackList: TechStack[] = truncateList(techStack, 0, 3);
 
   return (

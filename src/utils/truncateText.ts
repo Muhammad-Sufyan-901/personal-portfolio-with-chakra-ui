@@ -1,5 +1,3 @@
-export const truncateText = (text: string): string => {
-  const textLimit: number = 75;
-
+export const truncateText = (text: string, textLimit: number): string => {
   return text.length > textLimit ? `${text.slice(0, textLimit)}...` : text;
 };
