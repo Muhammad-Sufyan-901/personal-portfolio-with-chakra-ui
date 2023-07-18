@@ -2,7 +2,7 @@ import * as React from "react";
 import { Badge, Box, ButtonGroup, Card, CardBody, CardFooter, Flex, Heading, Text, useColorMode, useDisclosure } from "@chakra-ui/react";
 import { BsArrowRightCircleFill, BsFillEyeFill } from "react-icons/bs";
 import { Image } from "@chakra-ui/next-js";
-import { truncateText, truncateList } from "@/utils";
+import { truncateList } from "@/utils";
 import PrimaryButton from "./PrimaryButton";
 import PortfolioModal from "./PortfolioModal";
 import type { Portfolio, TechStack } from "@/types";
@@ -13,7 +13,6 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode } = useColorMode();
 
-  const truncatedDescription: string = truncateText(description, 75);
   const truncatedTechStackList: TechStack[] = truncateList(techStack, 0, 3);
 
   return (
@@ -95,7 +94,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
             )}
           </Flex>
 
-          <Text>{truncatedDescription}</Text>
+          <Text noOfLines={2}>{description}</Text>
         </CardBody>
 
         <CardFooter>
