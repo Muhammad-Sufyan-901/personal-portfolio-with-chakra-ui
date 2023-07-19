@@ -80,6 +80,7 @@ function HomeSectionComponent(): React.JSX.Element {
             </Text>
 
             <PrimaryButton
+              as="a"
               href="#contact"
               variant="solid"
               size="xl"

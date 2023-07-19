@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import { Button, type ButtonProps, type LinkProps, type SystemStyleObject } from "@chakra-ui/react";
 
 type PrimaryButtonProps = ButtonProps & LinkProps;
@@ -14,7 +15,7 @@ export default function PrimaryButton({ variant, href, children, ...props }: Pri
 
   return (
     <Button
-      as={href ? "a" : "button"}
+      as={href ? Link : "button"}
       href={href}
       variant={variant}
       border="2px"
