@@ -12,17 +12,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "Next JS",
         logo: "/assets/svg/next js.svg",
-        color: "orange.500",
       },
       {
         tech: "Tailwind",
         logo: "/assets/svg/tailwind.svg",
-        color: "blue.500",
       },
       {
         tech: "Framer Motion",
         logo: "/assets/svg/framer motion.svg",
-        color: "yellow.300",
       },
     ],
   },
@@ -37,17 +34,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "HTML",
         logo: "/assets/svg/html.svg",
-        color: "orange.500",
       },
       {
         tech: "CSS",
         logo: "/assets/svg/css.svg",
-        color: "blue.500",
       },
       {
         tech: "JavaScript",
         logo: "/assets/svg/javascript.svg",
-        color: "yellow.300",
       },
     ],
   },
@@ -62,22 +56,18 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "HTML",
         logo: "/assets/svg/html.svg",
-        color: "orange.500",
       },
       {
         tech: "CSS",
         logo: "/assets/svg/css.svg",
-        color: "blue.500",
       },
       {
         tech: "Bootstrap",
         logo: "/assets/svg/bootstrap.svg",
-        color: "purple",
       },
       {
         tech: "JavaScript",
         logo: "/assets/svg/javascript.svg",
-        color: "yellow.300",
       },
     ],
   },
@@ -92,17 +82,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "React JS",
         logo: "/assets/svg/react.svg",
-        color: "orange.500",
       },
       {
         tech: "Tailwind",
         logo: "/assets/svg/tailwind.svg",
-        color: "blue.500",
       },
       {
         tech: "Vite",
         logo: "/assets/svg/vite.svg",
-        color: "purple",
       },
     ],
   },
@@ -117,12 +104,10 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "React JS",
         logo: "/assets/svg/react.svg",
-        color: "orange.500",
       },
       {
         tech: "Material UI",
         logo: "/assets/svg/material ui.svg",
-        color: "blue.500",
       },
     ],
   },
@@ -137,17 +122,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "Next JS",
         logo: "/assets/svg/next js.svg",
-        color: "orange.500",
       },
       {
         tech: "Tailwind",
         logo: "/assets/svg/tailwind.svg",
-        color: "blue.500",
       },
       {
         tech: "TypeScript",
         logo: "/assets/svg/typescript.svg",
-        color: "blue.500",
       },
     ],
   },
@@ -162,7 +144,6 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "React JS",
         logo: "/assets/svg/react.svg",
-        color: "orange.500",
       },
     ],
   },
@@ -177,12 +158,10 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "React JS",
         logo: "/assets/svg/react.svg",
-        color: "orange.500",
       },
       {
         tech: "Tailwind",
         logo: "/assets/svg/tailwind.svg",
-        color: "orange.500",
       },
     ],
   },
@@ -197,7 +176,6 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "React JS",
         logo: "/assets/svg/react.svg",
-        color: "orange.500",
       },
     ],
   },
@@ -212,12 +190,10 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "React JS",
         logo: "/assets/svg/react.svg",
-        color: "orange.500",
       },
       {
         tech: "Tailwind",
         logo: "/assets/svg/tailwind.svg",
-        color: "orange.500",
       },
     ],
   },
@@ -232,17 +208,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "HTML",
         logo: "/assets/svg/html.svg",
-        color: "orange.500",
       },
       {
         tech: "CSS",
         logo: "/assets/svg/css.svg",
-        color: "blue.500",
       },
       {
         tech: "JavaScript",
         logo: "/assets/svg/javascript.svg",
-        color: "yellow.300",
       },
     ],
   },
@@ -257,17 +230,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "HTML",
         logo: "/assets/svg/html.svg",
-        color: "orange.500",
       },
       {
         tech: "CSS",
         logo: "/assets/svg/css.svg",
-        color: "blue.500",
       },
       {
         tech: "JavaScript",
         logo: "/assets/svg/javascript.svg",
-        color: "yellow.300",
       },
     ],
   },
@@ -282,17 +252,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "HTML",
         logo: "/assets/svg/html.svg",
-        color: "orange.500",
       },
       {
         tech: "CSS",
         logo: "/assets/svg/css.svg",
-        color: "blue.500",
       },
       {
         tech: "JavaScript",
         logo: "/assets/svg/javascript.svg",
-        color: "yellow.300",
       },
     ],
   },
@@ -307,17 +274,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "HTML",
         logo: "/assets/svg/html.svg",
-        color: "orange.500",
       },
       {
         tech: "CSS",
         logo: "/assets/svg/css.svg",
-        color: "blue.500",
       },
       {
         tech: "JavaScript",
         logo: "/assets/svg/javascript.svg",
-        color: "yellow.300",
       },
     ],
   },
@@ -332,17 +296,14 @@ export const portfolioList: Portfolio[] = [
       {
         tech: "HTML",
         logo: "/assets/svg/html.svg",
-        color: "orange.500",
       },
       {
         tech: "CSS",
         logo: "/assets/svg/css.svg",
-        color: "blue.500",
       },
       {
         tech: "JavaScript",
         logo: "/assets/svg/javascript.svg",
-        color: "yellow.300",
       },
     ],
   },
