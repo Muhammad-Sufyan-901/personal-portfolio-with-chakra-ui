@@ -12,3 +12,5 @@ export * from "./award";
 export * from "./workExperience";
 export * from "./portfolio";
 export * from "./techStack";
+export * from "./blog";
+export * from "./author";

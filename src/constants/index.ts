@@ -6,3 +6,4 @@ export * from "./education";
 export * from "./award";
 export * from "./workExperience";
 export * from "./portfolio";
+export * from "./blog";

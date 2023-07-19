@@ -9,3 +9,6 @@ export { default as ExperienceSectionComponent } from "./ExperienceSectionCompon
 export { default as PortfolioSectionComponent } from "./PortfolioSectionComponent";
 export { default as PortfolioPageSectionComponent } from "./PortfolioPageSectionComponent";
 export { default as GetInTouchComponent } from "./GetInTouchComponent";
+export { default as BlogSectionComponent } from "./BlogSectionComponent";
+export { default as BlogPageSectionComponent } from "./BlogPageSectionComponent";
+export { default as ContactSectionComponent } from "./ContactSectionComponent";

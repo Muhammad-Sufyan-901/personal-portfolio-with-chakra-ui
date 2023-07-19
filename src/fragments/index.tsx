@@ -11,3 +11,4 @@ export { default as AwardListItem } from "./AwardListItem";
 export { default as WorkExperienceCard } from "./WorkExperienceCard";
 export { default as PortfolioCard } from "./PortfolioCard";
 export { default as PortfolioModal } from "./PortfolioModal";
+export { default as BlogCard } from "./BlogCard";
