@@ -98,7 +98,12 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
         </CardBody>
 
         <CardFooter>
-          <ButtonGroup>
+          <ButtonGroup
+            display="flex"
+            flexDirection={{ base: "row", md: "column", lg: "row" }}
+            rowGap={{ base: 0, md: 2, lg: 0 }}
+            spacing={{ base: 2, md: 0, lg: 2 }}
+          >
             <PrimaryButton
               onClick={onOpen}
               variant="solid"
