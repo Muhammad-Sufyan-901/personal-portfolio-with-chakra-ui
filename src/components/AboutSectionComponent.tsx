@@ -135,7 +135,7 @@ function AboutSectionComponent(): React.JSX.Element {
                 marginTop={6}
                 columnGap={{ base: 0, lg: "1.5rem" }}
                 rowGap={{ base: "1rem", lg: 0 }}
-                templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+                templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
                 placeItems={{ base: "center", lg: "start" }}
               >
                 {experiences.map(
