@@ -11,6 +11,8 @@ export default function ThemeToggleButton({ colorMode, toggleColorMode }: ThemeT
   return (
     <Box
       as="button"
+      role="button"
+      aria-label="Theme Toggle Button"
       shadow="lg"
       padding="1.25rem"
       backgroundColor={colorMode === "dark" ? "rgba(255, 255, 255, 0.1)" : "white"}

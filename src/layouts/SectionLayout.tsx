@@ -26,6 +26,7 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                   key={`#${link} - ${index}`}
                   href={link}
                   target="_blank"
+                  aria-label="Social Media Button"
                 >
                   <Box
                     shadow="lg"
@@ -72,6 +73,7 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                   <Link
                     href={`/#${href}`}
                     scroll={false}
+                    aria-label="Section Navigation Indicator Button"
                   >
                     <Box
                       width={2}
