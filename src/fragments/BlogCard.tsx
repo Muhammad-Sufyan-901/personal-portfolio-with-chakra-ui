@@ -144,7 +144,7 @@ export default function BlogCard({ slug, title, description, thumbnailImage, cat
           fontSize="0.75rem"
           rightIcon={<BsArrowRight fontSize="1rem" />}
         >
-          Read More
+          Read Blog
         </PrimaryButton>
       </CardFooter>
     </Card>

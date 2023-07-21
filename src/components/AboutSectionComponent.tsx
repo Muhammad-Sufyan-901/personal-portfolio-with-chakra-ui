@@ -167,7 +167,7 @@ function AboutSectionComponent(): React.JSX.Element {
                   columnGap="1"
                   rightIcon={<BsFillChatFill fontSize="1.25rem" />}
                 >
-                  Let&apos;s Talk
+                  Contact With Me
                 </PrimaryButton>
               </Box>
             </Flex>
