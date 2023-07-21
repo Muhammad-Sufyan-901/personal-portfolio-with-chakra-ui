@@ -12,6 +12,7 @@ export default function ContactCard({ title, contactVia, contactLink, cardIcon }
       as={Link}
       href={contactLink}
       target="_blank"
+      aria-label="Contact Card"
       backgroundColor="card"
       borderBottomWidth="2px"
       borderBottomColor="primary"
