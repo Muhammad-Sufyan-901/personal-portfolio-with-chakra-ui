@@ -92,7 +92,7 @@ function AboutSectionComponent(): React.JSX.Element {
                 </Text>
 
                 <Text
-                  as="h4"
+                  as="h3"
                   marginBottom={8}
                   fontWeight="semibold"
                   fontSize={{ base: "xl", lg: "2xl" }}

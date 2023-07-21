@@ -61,7 +61,7 @@ function HomeSectionComponent(): React.JSX.Element {
             </Text>
 
             <Text
-              as="h3"
+              as="h2"
               color="text"
               fontWeight="semibold"
               fontSize="1.5rem"
