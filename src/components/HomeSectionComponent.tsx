@@ -1,17 +1,18 @@
 import * as React from "react";
 import Typewriter from "typewriter-effect";
 import { Box, Button, Container, Flex, Grid, GridItem, Show, Text, useColorMode } from "@chakra-ui/react";
-import { BsArrowDown, BsFillChatFill } from "react-icons/bs";
+import { BsArrowDown } from "react-icons/bs";
 import { profileData } from "@/constants";
 import { HomeImageBlob, PrimaryButton } from "@/fragments";
 import { colors } from "@/themes";
 import { bouncingAnimation } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
+import { FaDownload } from "react-icons/fa";
 
 function HomeSectionComponent(): React.JSX.Element {
   const { colorMode } = useColorMode();
 
-  const { name, divisions, descriptions, pictures } = profileData;
+  const { name, divisions, descriptions, pictures, CV } = profileData;
 
   return (
     <Box
@@ -80,18 +81,18 @@ function HomeSectionComponent(): React.JSX.Element {
             </Text>
 
             <PrimaryButton
-              as="a"
-              href="#contact"
+              href={CV}
+              target="_blank"
               variant="solid"
               size="xl"
+              borderRadius="0.5rem"
               paddingY="4"
               paddingX={{ base: "8", lg: "12" }}
-              borderRadius="0.5rem"
-              width="fit-content"
-              columnGap="1"
-              rightIcon={<BsFillChatFill fontSize="1.25rem" />}
+              columnGap={2}
+              rightIcon={<FaDownload />}
+              download
             >
-              Let&apos;s Talk
+              Download CV
             </PrimaryButton>
           </GridItem>
 

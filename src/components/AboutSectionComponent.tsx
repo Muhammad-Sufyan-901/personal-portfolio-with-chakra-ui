@@ -5,6 +5,7 @@ import { FaDownload } from "react-icons/fa";
 import { AboutExperienceCard, PrimaryButton, SectionTitle } from "@/fragments";
 import { profileData } from "@/constants";
 import SectionLayout from "@/layouts/SectionLayout";
+import { BsFillChatFill } from "react-icons/bs";
 
 function AboutSectionComponent(): React.JSX.Element {
   const { name, pictures, region, divisions, descriptions, experiences, CV } = profileData;
@@ -156,18 +157,17 @@ function AboutSectionComponent(): React.JSX.Element {
                 marginX={{ base: "auto", lg: "0" }}
               >
                 <PrimaryButton
-                  href={CV}
-                  target="_blank"
+                  as="a"
+                  href="#contact"
                   variant="outline"
                   size="xl"
-                  borderRadius="0.5rem"
                   paddingY="4"
                   paddingX={{ base: "8", lg: "12" }}
-                  columnGap={2}
-                  rightIcon={<FaDownload />}
-                  download
+                  borderRadius="0.5rem"
+                  columnGap="1"
+                  rightIcon={<BsFillChatFill fontSize="1.25rem" />}
                 >
-                  Download CV
+                  Let&apos;s Talk
                 </PrimaryButton>
               </Box>
             </Flex>
