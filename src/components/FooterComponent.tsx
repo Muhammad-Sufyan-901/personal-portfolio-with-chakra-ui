@@ -85,6 +85,7 @@ export default function FooterComponent(): React.JSX.Element {
               key={`#${link} - ${index}`}
               href={link}
               target="_blank"
+              aria-label="Social Media Button"
             >
               <Box
                 shadow="sm"
