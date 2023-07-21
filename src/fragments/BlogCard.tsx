@@ -1,7 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { Box, Card, CardBody, CardFooter, Flex, Heading, Text } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/next-js";
+import { Box, Card, CardBody, CardFooter, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { BiTime } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import PrimaryButton from "./PrimaryButton";
@@ -38,9 +37,6 @@ export default function BlogCard({ slug, title, description, thumbnailImage, cat
           <Image
             src={thumbnailImage}
             alt="Blog Thumbnail Image"
-            height={220}
-            width={400}
-            priority
             transition="all 300ms"
             style={{
               objectFit: "cover",
