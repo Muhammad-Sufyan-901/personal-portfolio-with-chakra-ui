@@ -40,8 +40,8 @@ export default function BlogCard({ slug, title, description, thumbnailImage, cat
             transition="all 300ms"
             style={{
               objectFit: "cover",
-              height: "auto",
-              width: "auto",
+              height: "14rem",
+              width: "100%",
             }}
             _groupHover={{
               transform: "scale(1.05)",

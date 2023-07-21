@@ -42,8 +42,8 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
               transition="all 300ms"
               style={{
                 objectFit: "cover",
-                height: "auto",
-                width: "auto",
+                height: "100%",
+                width: "100%",
               }}
               _groupHover={{
                 transform: "scale(1.05)",
