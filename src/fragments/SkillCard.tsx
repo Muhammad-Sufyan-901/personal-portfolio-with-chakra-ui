@@ -32,7 +32,7 @@ export default function SkillCard({ skillIcon, title, level }: SkillCardProps): 
       </Box>
 
       <Text
-        as="h4"
+        as="h6"
         fontWeight="semibold"
         fontSize={{ base: "0.9em", lg: "1em" }}
       >
