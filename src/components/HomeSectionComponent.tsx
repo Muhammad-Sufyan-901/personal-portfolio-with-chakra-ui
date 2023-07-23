@@ -1,13 +1,14 @@
 import * as React from "react";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 import { Box, Button, Container, Flex, Grid, GridItem, Show, Text, useColorMode } from "@chakra-ui/react";
 import { BsArrowDown } from "react-icons/bs";
+import { FaDownload } from "react-icons/fa";
 import { profileData } from "@/constants";
 import { HomeImageBlob, PrimaryButton } from "@/fragments";
 import { colors } from "@/themes";
-import { bouncingAnimation } from "@/utils";
+import { bouncingAnimation, slideInTransition, staggeredContainer, textVariantTransition, zoomInTransition } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
-import { FaDownload } from "react-icons/fa";
 
 function HomeSectionComponent(): React.JSX.Element {
   const { colorMode } = useColorMode();
@@ -25,13 +26,20 @@ function HomeSectionComponent(): React.JSX.Element {
     >
       {/* Home Section Container */}
       <Container
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true, amount: 0.25 }}
+        whileInView="show"
+        initial="hidden"
         maxWidth={{ base: "container.lg", xl: "75rem" }}
         paddingX={{ base: "4", xl: 0 }}
         paddingTop="4rem"
       >
         <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}>
           {/* Home Section Text Info Content */}
-          <GridItem
+          <Box
+            as={motion.div}
+            variants={slideInTransition("left", "tween", 0.1, 1)}
             display="flex"
             flexDirection="column"
             paddingY="4rem"
@@ -39,7 +47,8 @@ function HomeSectionComponent(): React.JSX.Element {
             textAlign={{ base: "center", lg: "start" }}
           >
             <Text
-              as="span"
+              as={motion.span}
+              variants={textVariantTransition(1.1)}
               color="secondary"
               fontWeight="semibold"
               fontSize="1rem"
@@ -48,7 +57,8 @@ function HomeSectionComponent(): React.JSX.Element {
             </Text>
 
             <Text
-              as="h1"
+              as={motion.h1}
+              variants={textVariantTransition(1.2)}
               color="primary"
               fontWeight="semibold"
               lineHeight="120%"
@@ -61,7 +71,8 @@ function HomeSectionComponent(): React.JSX.Element {
             </Text>
 
             <Text
-              as="h2"
+              as={motion.h2}
+              variants={textVariantTransition(1.3)}
               color="text"
               fontWeight="semibold"
               fontSize="1.5rem"
@@ -71,6 +82,8 @@ function HomeSectionComponent(): React.JSX.Element {
             </Text>
 
             <Text
+              as={motion.p}
+              variants={textVariantTransition(1.4)}
               color="secondary"
               fontWeight="medium"
               fontSize="1rem"
@@ -80,24 +93,31 @@ function HomeSectionComponent(): React.JSX.Element {
               {descriptions[0]}
             </Text>
 
-            <PrimaryButton
-              href={CV}
-              target="_blank"
-              variant="solid"
-              size="xl"
-              borderRadius="0.5rem"
-              paddingY="4"
-              paddingX={{ base: "8", lg: "12" }}
-              columnGap={2}
-              rightIcon={<FaDownload />}
-              download
+            <Box
+              as={motion.div}
+              variants={zoomInTransition(1.5, 0.75)}
             >
-              Download CV
-            </PrimaryButton>
-          </GridItem>
+              <PrimaryButton
+                href={CV}
+                target="_blank"
+                variant="solid"
+                size="xl"
+                borderRadius="0.5rem"
+                paddingY="4"
+                paddingX={{ base: "8", lg: "12" }}
+                columnGap={2}
+                rightIcon={<FaDownload />}
+                download
+              >
+                Download CV
+              </PrimaryButton>
+            </Box>
+          </Box>
 
           {/* Home Section Profile Image */}
-          <GridItem
+          <Box
+            as={motion.div}
+            variants={slideInTransition("right", "tween", 0.1, 1)}
             display="flex"
             flex="1"
             justifyContent="center"
@@ -107,11 +127,16 @@ function HomeSectionComponent(): React.JSX.Element {
               image={pictures[0]}
               fill={colorMode === "light" ? colors.primary.default! : colors.primary._dark!}
             />
-          </GridItem>
+          </Box>
         </Grid>
 
         <Show above="lg">
           <Flex
+            as={motion.div}
+            variants={slideInTransition("up", "tween", 0.2, 1.1)}
+            viewport={{ once: true }}
+            whileInView="show"
+            initial="hidden"
             justifyContent="center"
             alignItems="center"
             marginTop={{ lg: "10", xl: "16" }}
