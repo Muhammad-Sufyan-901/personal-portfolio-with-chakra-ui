@@ -46,9 +46,16 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                     borderColor="transparent"
                     transition="all 300ms"
                     _hover={{
-                      color: "primary",
-                      backgroundColor: "white",
+                      color: "white",
+                      backgroundColor: "primary",
                       transform: "translateY(-0.25rem)",
+                    }}
+                    _dark={{
+                      _hover: {
+                        color: "primary",
+                        backgroundColor: "white",
+                        transform: "translateY(-0.25rem)",
+                      },
                     }}
                   >
                     <SocialMediaIcon />
