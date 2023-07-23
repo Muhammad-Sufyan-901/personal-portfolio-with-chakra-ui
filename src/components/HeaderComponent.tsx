@@ -5,9 +5,9 @@ import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { navigationLinkList, profileData } from "@/constants";
 import { ThemeToggleButton } from "@/fragments";
-import MobileHeaderComponent from "./MobileHeaderComponent";
 import { staggeredContainer, fadeInTransition } from "@/utils";
 import { motion } from "framer-motion";
+import MobileHeaderComponent from "./MobileHeaderComponent";
 
 export default function HeaderComponent(): React.JSX.Element {
   const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
@@ -123,6 +123,7 @@ export default function HeaderComponent(): React.JSX.Element {
             <Hide above="xl">
               <Box
                 as="button"
+                aria-label="Mobile Navigation Bar Toggle Button"
                 color="white"
                 padding="4"
                 borderRadius="md"
