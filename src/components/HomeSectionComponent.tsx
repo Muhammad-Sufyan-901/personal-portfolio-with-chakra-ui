@@ -37,7 +37,7 @@ function HomeSectionComponent(): React.JSX.Element {
       >
         <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}>
           {/* Home Section Text Info Content */}
-          <Box
+          <GridItem
             as={motion.div}
             variants={slideInTransition("left", "tween", 0.1, 1)}
             display="flex"
@@ -112,10 +112,10 @@ function HomeSectionComponent(): React.JSX.Element {
                 Download CV
               </PrimaryButton>
             </Box>
-          </Box>
+          </GridItem>
 
           {/* Home Section Profile Image */}
-          <Box
+          <GridItem
             as={motion.div}
             variants={slideInTransition("right", "tween", 0.1, 1)}
             display="flex"
@@ -127,9 +127,10 @@ function HomeSectionComponent(): React.JSX.Element {
               image={pictures[0]}
               fill={colorMode === "light" ? colors.primary.default! : colors.primary._dark!}
             />
-          </Box>
+          </GridItem>
         </Grid>
 
+        {/* Home Section Scroll Down Button */}
         <Show above="lg">
           <Flex
             as={motion.div}
