@@ -16,3 +16,4 @@ export * from "./blog";
 export * from "./author";
 export * from "./contactCard";
 export * from "./formInitialValues";
+export * from "./motion";

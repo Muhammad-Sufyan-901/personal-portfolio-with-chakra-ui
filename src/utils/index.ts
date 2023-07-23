@@ -4,3 +4,4 @@ export * from "./truncateList";
 export * from "./getOneBlog";
 export * from "./validateForm";
 export * from "./sendEmail";
+export * from "./motion";
