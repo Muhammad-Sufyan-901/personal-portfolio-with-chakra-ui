@@ -1,8 +1,10 @@
 import * as React from "react";
-import { Box, Container, Flex, Grid, GridItem, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { Box, Container, Flex, Grid, GridItem, Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import { FaCode, FaPencilRuler } from "react-icons/fa";
 import { SectionDescription, SectionSubtitle, SectionTitle, SkillCard } from "@/fragments";
 import { skillList, toolsList } from "@/constants";
+import { fadeInTransition, staggeredContainer } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
 
 function SkillsSectionComponent(): React.JSX.Element {
@@ -19,6 +21,11 @@ function SkillsSectionComponent(): React.JSX.Element {
 
       {/* Skills Section Content */}
       <Container
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true, amount: 0.25 }}
+        initial="hidden"
+        whileInView="show"
         marginTop={{ base: "1rem", lg: "2.5rem" }}
         maxWidth={{ base: "container.lg", xl: "75rem" }}
       >
@@ -28,6 +35,8 @@ function SkillsSectionComponent(): React.JSX.Element {
         >
           {/* Skills Section Tech Stack & Tools Content */}
           <GridItem
+            as={motion.div}
+            variants={fadeInTransition("right", "tween", 0, 1)}
             backgroundColor="card"
             shadow="lg"
             borderRadius="lg"
@@ -69,12 +78,6 @@ function SkillsSectionComponent(): React.JSX.Element {
                 </Tab>
               </TabList>
 
-              <TabIndicator
-                height="2px"
-                marginTop="-1.5rem"
-                backgroundColor="primary"
-              />
-
               <TabPanels>
                 {/* Skills Section Tech Stack Content */}
                 <TabPanel>
@@ -85,7 +88,11 @@ function SkillsSectionComponent(): React.JSX.Element {
                   >
                     {skillList.map(
                       ({ skillIcon, title, level }, index): React.ReactNode => (
-                        <GridItem key={`Skills - ${index} : ${title}`}>
+                        <GridItem
+                          as={motion.div}
+                          variants={fadeInTransition("up", "tween", index * 0.1, 1.1)}
+                          key={`Skills - ${index} : ${title}`}
+                        >
                           <SkillCard
                             skillIcon={skillIcon}
                             title={title}
@@ -106,7 +113,11 @@ function SkillsSectionComponent(): React.JSX.Element {
                   >
                     {toolsList.map(
                       ({ skillIcon, title, level }, index): React.ReactNode => (
-                        <GridItem key={`Skills - ${index} : ${title}`}>
+                        <GridItem
+                          as={motion.div}
+                          variants={fadeInTransition("up", "tween", index * 0.1, 1.1)}
+                          key={`Skills - ${index} : ${title}`}
+                        >
                           <SkillCard
                             skillIcon={skillIcon}
                             title={title}
@@ -122,7 +133,11 @@ function SkillsSectionComponent(): React.JSX.Element {
           </GridItem>
 
           {/* Skills Section Subtitle & Description */}
-          <GridItem order={{ base: 1, lg: 2 }}>
+          <GridItem
+            as={motion.div}
+            variants={fadeInTransition("up", "tween", 0.1, 1.1)}
+            order={{ base: 1, lg: 2 }}
+          >
             <Flex
               height="100%"
               width="100%"
