@@ -1,11 +1,12 @@
 import * as React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Box, Container, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
-import { FaDownload } from "react-icons/fa";
+import { BsFillChatFill } from "react-icons/bs";
 import { AboutExperienceCard, PrimaryButton, SectionTitle } from "@/fragments";
 import { profileData } from "@/constants";
+import { fadeInTransition, staggeredContainer, textVariantTransition } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
-import { BsFillChatFill } from "react-icons/bs";
 
 function AboutSectionComponent(): React.JSX.Element {
   const { name, pictures, region, divisions, descriptions, experiences, CV } = profileData;
@@ -22,13 +23,22 @@ function AboutSectionComponent(): React.JSX.Element {
       <SectionTitle title="About Me" />
 
       {/* About Section Content Container */}
-      <Container maxWidth={{ base: "container.lg", xl: "75rem" }}>
+      <Container
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true, amount: 0.25 }}
+        initial="hidden"
+        whileInView="show"
+        maxWidth={{ base: "container.lg", xl: "75rem" }}
+      >
         <Grid
           gap={{ base: "2.5rem", lg: "15%" }}
           templateColumns={{ base: "1fr", lg: "35% 50%" }}
         >
           {/* About Image Banner */}
           <GridItem
+            as={motion.div}
+            variants={fadeInTransition("right", "tween", 0.1, 1.1)}
             display="grid"
             placeItems="center"
             bgGradient="linear(45deg, transparent, primary, transparent)"
@@ -64,20 +74,25 @@ function AboutSectionComponent(): React.JSX.Element {
           </GridItem>
 
           {/* About Section Information Content */}
-          <GridItem>
+          <GridItem
+            as={motion.div}
+            variants={fadeInTransition("left", "tween", 0.1, 1.1)}
+          >
             <Flex
+              as={motion.div}
+              variants={fadeInTransition("left", "tween", 0.2, 1.1)}
               direction="column"
               justifyContent="center"
               height="100%"
             >
               {/* About Section Information Title And Description */}
-
               <Box
                 textAlign={{ base: "center", lg: "start" }}
                 marginTop={{ base: 6, lg: 0 }}
               >
                 <Text
-                  as="h2"
+                  as={motion.h2}
+                  variants={textVariantTransition(1.1)}
                   marginBottom={3}
                   fontWeight="semibold"
                   fontSize={{ base: "1.75rem", lg: "2rem" }}
@@ -92,7 +107,8 @@ function AboutSectionComponent(): React.JSX.Element {
                 </Text>
 
                 <Text
-                  as="h3"
+                  as={motion.h3}
+                  variants={textVariantTransition(1.2)}
                   marginBottom={8}
                   fontWeight="semibold"
                   fontSize={{ base: "xl", lg: "2xl" }}
@@ -114,6 +130,8 @@ function AboutSectionComponent(): React.JSX.Element {
                 </Text>
 
                 <Box
+                  as={motion.div}
+                  variants={textVariantTransition(1.3)}
                   borderBottom="2px"
                   borderColor={{ base: "transparent", lg: "text" }}
                   paddingBottom={8}
@@ -141,7 +159,11 @@ function AboutSectionComponent(): React.JSX.Element {
               >
                 {experiences.map(
                   ({ number, title }, index): React.ReactNode => (
-                    <GridItem key={`experience - ${index}`}>
+                    <GridItem
+                      key={`experience - ${index}`}
+                      as={motion.div}
+                      variants={fadeInTransition("left", "spring", index * 0.5, 0.75)}
+                    >
                       <AboutExperienceCard
                         number={number}
                         title={title}
@@ -151,8 +173,10 @@ function AboutSectionComponent(): React.JSX.Element {
                 )}
               </Grid>
 
-              {/* About Section Information Download CV Button */}
+              {/* About Section Information Contact Me Button */}
               <Box
+                as={motion.div}
+                variants={fadeInTransition("left", "tween", 0.1, 1)}
                 marginTop={10}
                 marginX={{ base: "auto", lg: "0" }}
               >
