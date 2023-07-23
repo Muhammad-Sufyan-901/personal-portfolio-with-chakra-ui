@@ -1,12 +1,19 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import { Box, Flex, Show, Tooltip } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
 import { navigationLinkList, socialMediaList } from "@/constants";
+import { fadeInTransition, staggeredContainer } from "@/utils";
 
 export default function SectionLayout(MainSection: React.FunctionComponent, activeSectionIndicator: string = ""): (props: any) => React.JSX.Element {
   return function WrappedSection(props: any): React.JSX.Element {
     return (
       <Box
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true }}
+        whileInView="show"
+        initial="hidden"
         width="100vw"
         position="relative"
       >
@@ -29,6 +36,8 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                   aria-label="Social Media Button"
                 >
                   <Box
+                    as={motion.div}
+                    variants={fadeInTransition("right", "tween", index * 0.1, 0.85)}
                     shadow="lg"
                     color="primary"
                     backgroundColor="background"
@@ -76,6 +85,8 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                     aria-label="Section Navigation Indicator Button"
                   >
                     <Box
+                      as={motion.div}
+                      variants={fadeInTransition("left", "tween", 0.2, 0.5)}
                       width={2}
                       height={2}
                       borderRadius="full"
