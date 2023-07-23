@@ -24,6 +24,7 @@ function EducationSectionComponent(): React.JSX.Element {
       <Container
         as={motion.div}
         variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true, amount: 0.25 }}
         initial="hidden"
         whileInView="show"
         marginTop={{ base: "1rem", lg: "2.5rem" }}
