@@ -6,6 +6,8 @@ import { IoClose } from "react-icons/io5";
 import { navigationLinkList, profileData } from "@/constants";
 import { ThemeToggleButton } from "@/fragments";
 import MobileHeaderComponent from "./MobileHeaderComponent";
+import { staggeredContainer, fadeInTransition } from "@/utils";
+import { motion } from "framer-motion";
 
 export default function HeaderComponent(): React.JSX.Element {
   const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
@@ -28,7 +30,10 @@ export default function HeaderComponent(): React.JSX.Element {
   return (
     <React.Fragment>
       <Box
-        as="header"
+        as={motion.header}
+        variants={staggeredContainer(0.1, 0.1)}
+        whileInView="show"
+        initial="hidden"
         width="100vw"
         shadow={isScrolled ? "lg" : "none"}
         top={0}
@@ -38,10 +43,12 @@ export default function HeaderComponent(): React.JSX.Element {
         position="fixed"
         backdropFilter={{ base: "none", lg: isScrolled ? "blur(1.25rem)" : "none" }}
         backgroundColor={{ base: isScrolled ? "background" : "transparent", lg: isScrolled ? "rgba(255, 255, 255, 0.1)" : "transparent" }}
-        transition="background-color 300ms"
+        transition="all 300ms"
       >
         {/* Header Container */}
         <Container
+          as={motion.div}
+          variants={fadeInTransition("down", "tween", 0.1, 0.5)}
           width="100%"
           paddingX="1rem"
           maxWidth={{ sm: "40rem", md: "48rem", lg: "75rem", xl: "82rem", "2xl": "98rem" }}
