@@ -1,9 +1,11 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import { Badge, Box, Container, Flex, Grid, GridItem } from "@chakra-ui/react";
 import { AiFillTrophy } from "react-icons/ai";
 import { MdOutlineSchool } from "react-icons/md";
 import { AwardListItem, EducationListItem, SectionDescription, SectionSubtitle, SectionTitle } from "@/fragments";
 import { awardList, educationList } from "@/constants";
+import { fadeInTransition, staggeredContainer } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
 
 function EducationSectionComponent(): React.JSX.Element {
@@ -20,6 +22,10 @@ function EducationSectionComponent(): React.JSX.Element {
 
       {/* Education Section Content */}
       <Container
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        initial="hidden"
+        whileInView="show"
         marginTop={{ base: "1rem", lg: "2.5rem" }}
         maxWidth={{ base: "container.lg", lg: "75rem" }}
       >
@@ -28,7 +34,10 @@ function EducationSectionComponent(): React.JSX.Element {
           gap={{ base: 10, lg: "5%" }}
         >
           {/* Education Section Subtitle & Description */}
-          <GridItem>
+          <GridItem
+            as={motion.div}
+            variants={fadeInTransition("right", "tween", 0.2, 0.5)}
+          >
             <Flex
               height="100%"
               width="100%"
@@ -64,7 +73,10 @@ function EducationSectionComponent(): React.JSX.Element {
               gap={{ base: "4rem", lg: 8 }}
             >
               {/* Education Section Educations Content */}
-              <GridItem>
+              <GridItem
+                as={motion.div}
+                variants={fadeInTransition("left", "tween", 0.2, 1.1)}
+              >
                 <Badge
                   color="white"
                   backgroundColor="primary"
@@ -94,7 +106,10 @@ function EducationSectionComponent(): React.JSX.Element {
               </GridItem>
 
               {/* Education Section Awards Content */}
-              <GridItem>
+              <GridItem
+                as={motion.div}
+                variants={fadeInTransition("left", "tween", 0.2, 1.1)}
+              >
                 <Badge
                   color="white"
                   backgroundColor="primary"
