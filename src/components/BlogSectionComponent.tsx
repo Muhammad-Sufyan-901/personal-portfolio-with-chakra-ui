@@ -26,7 +26,7 @@ function BlogSectionComponent(): React.JSX.Element {
       <Container
         as={motion.div}
         variants={staggeredContainer(0.1, 0.1)}
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true }}
         whileInView="show"
         initial="hidden"
         maxWidth={{ base: "container.lg", lg: "75rem" }}
