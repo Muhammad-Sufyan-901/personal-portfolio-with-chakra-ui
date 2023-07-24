@@ -1,9 +1,10 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import { Box, Center, Container, Flex, Grid, GridItem } from "@chakra-ui/react";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { BlogCard, PrimaryButton, SectionDescription, SectionSubtitle, SectionTitle } from "@/fragments";
 import { blogList } from "@/constants";
-import { truncateList } from "@/utils";
+import { fadeInTransition, staggeredContainer, truncateList } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
 import type { Blog } from "@/types";
 
@@ -22,9 +23,18 @@ function BlogSectionComponent(): React.JSX.Element {
       <SectionTitle title="Blog" />
 
       {/* Blog Section Content */}
-      <Container maxWidth={{ base: "container.lg", lg: "75rem" }}>
+      <Container
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true, amount: 0.25 }}
+        whileInView="show"
+        initial="hidden"
+        maxWidth={{ base: "container.lg", lg: "75rem" }}
+      >
         {/* Blog Section Subtitle & Description */}
         <Flex
+          as={motion.div}
+          variants={fadeInTransition("up", "tween", 0.1, 1.1)}
           direction="column"
           rowGap={{ base: 3, lg: 5 }}
         >
@@ -34,6 +44,8 @@ function BlogSectionComponent(): React.JSX.Element {
 
         {/* Blog Section Content Container */}
         <Grid
+          as={motion.div}
+          variants={fadeInTransition("right", "tween", 0, 1)}
           templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
           gap={8}
           width={{ base: "90%", lg: "100%" }}
@@ -42,7 +54,11 @@ function BlogSectionComponent(): React.JSX.Element {
         >
           {truncatedBlogList.map(
             ({ slug, title, description, thumbnailImage, categories, uploadedAt, author }, index): React.JSX.Element => (
-              <GridItem key={`${slug} - ${index}`}>
+              <GridItem
+                as={motion.div}
+                variants={fadeInTransition("up", "tween", index * 0.25, 1.1)}
+                key={`${slug} - ${index}`}
+              >
                 <BlogCard
                   slug={slug}
                   title={title}
@@ -58,7 +74,11 @@ function BlogSectionComponent(): React.JSX.Element {
         </Grid>
 
         {/* Blog Section Redirect Button */}
-        <Center marginTop={12}>
+        <Center
+          as={motion.div}
+          variants={fadeInTransition("up", "tween", 0.5, 1.1)}
+          marginTop={12}
+        >
           <PrimaryButton
             href="/blog"
             variant="solid"
