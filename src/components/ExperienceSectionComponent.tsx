@@ -1,4 +1,5 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -8,6 +9,7 @@ import { workExperienceList } from "@/constants";
 import SectionLayout from "@/layouts/SectionLayout";
 import "swiper/css/navigation";
 import "swiper/css";
+import { fadeInTransition, staggeredContainer } from "@/utils";
 
 function ExperienceSectionComponent(): React.JSX.Element {
   return (
@@ -22,9 +24,18 @@ function ExperienceSectionComponent(): React.JSX.Element {
       <SectionTitle title="Experiences" />
 
       {/* Experience Section Content */}
-      <Container maxWidth={{ base: "container.lg", lg: "75rem" }}>
+      <Container
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true, amount: 0.25 }}
+        initial="hidden"
+        whileInView="show"
+        maxWidth={{ base: "container.lg", lg: "75rem" }}
+      >
         {/* Experience Section Subtitle & Description */}
         <Flex
+          as={motion.div}
+          variants={fadeInTransition("up", "tween", 0.1, 1.1)}
           direction="column"
           rowGap={{ base: 3, lg: 5 }}
         >
@@ -34,6 +45,8 @@ function ExperienceSectionComponent(): React.JSX.Element {
 
         {/* Experience Section Work Experiences Container */}
         <Box
+          as={motion.div}
+          variants={fadeInTransition("up", "tween", 0.2, 1.2)}
           marginTop={12}
           paddingBottom={16}
         >
