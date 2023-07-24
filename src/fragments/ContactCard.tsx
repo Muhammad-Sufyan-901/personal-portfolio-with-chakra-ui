@@ -47,7 +47,7 @@ export default function ContactCard({ title, contactVia, contactLink, cardIcon }
           <Text
             color="secondary"
             fontSize={{ base: "0.8em", md: "0.9em" }}
-            maxWidth={{ base: "100%", md: "70%", lg: "100%" }}
+            maxWidth={{ base: "90%", md: "70%", lg: "100%" }}
           >
             {contactVia}
           </Text>
