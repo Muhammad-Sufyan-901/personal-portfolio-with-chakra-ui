@@ -1,7 +1,6 @@
 import * as React from "react";
-import NextImage from "next/image";
-import { Image } from "@chakra-ui/next-js";
-import { Badge, Box, Button, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useColorMode } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { Badge, Box, Button, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useColorMode, Skeleton } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
 import type { Portfolio } from "@/types";
 
@@ -52,12 +51,12 @@ export default function PortfolioModal({ title, imageThumbnail, description, rep
             width="100%"
             height="100%"
           >
-            <NextImage
+            <Image
               src={imageThumbnail}
               alt="Project Preview Thumbail"
               height={350}
               width={550}
-              priority
+              fallback={<Skeleton height="20rem" />}
               style={{ objectFit: "cover", width: "100%", height: "auto" }}
             />
           </Box>

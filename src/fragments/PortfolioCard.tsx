@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Badge, Box, ButtonGroup, Card, CardBody, CardFooter, Flex, Heading, Image, Text, useColorMode, useDisclosure } from "@chakra-ui/react";
+import { Badge, Box, ButtonGroup, Card, CardBody, CardFooter, Flex, Heading, Image, Skeleton, Text, useColorMode, useDisclosure } from "@chakra-ui/react";
 import { BsArrowRightCircleFill, BsFillEyeFill } from "react-icons/bs";
 import { truncateList } from "@/utils";
 import PrimaryButton from "./PrimaryButton";
@@ -40,6 +40,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
               src={imageThumbnail}
               alt="Project Preview Thumbail"
               transition="all 300ms"
+              fallback={<Skeleton height="13rem" />}
               style={{
                 objectFit: "cover",
                 height: "100%",
