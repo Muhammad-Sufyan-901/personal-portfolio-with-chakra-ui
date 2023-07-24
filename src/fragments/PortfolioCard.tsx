@@ -94,23 +94,20 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
         </CardBody>
 
         <CardFooter>
-          <ButtonGroup
-            display="flex"
-            flexDirection={{ base: "row", md: "column", lg: "row" }}
-            rowGap={{ base: 0, md: 2, lg: 0 }}
-            spacing={{ base: 2, md: 0, lg: 2 }}
-          >
+          <ButtonGroup>
             <PrimaryButton
               onClick={onOpen}
               variant="solid"
+              paddingX={{ base: 2 }}
               rightIcon={<BsArrowRightCircleFill />}
             >
-              More Details
+              Details
             </PrimaryButton>
             <PrimaryButton
               href={livePreviewURL}
               variant="ghost"
               target="_blank"
+              paddingX={{ base: 2 }}
               _hover={{
                 borderColor: "text",
                 backgroundColor: "text",
@@ -118,7 +115,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
               }}
               rightIcon={<BsFillEyeFill />}
             >
-              Live Preview
+              Preview
             </PrimaryButton>
           </ButtonGroup>
         </CardFooter>
