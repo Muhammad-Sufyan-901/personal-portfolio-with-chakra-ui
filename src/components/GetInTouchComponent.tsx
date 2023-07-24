@@ -1,11 +1,18 @@
 import * as React from "react";
-import { Box, Center, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import { PrimaryButton } from "@/fragments";
 import { FaPaperPlane } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeInTransition, slideInTransition, staggeredContainer, textVariantTransition } from "@/utils";
 
 export default function GetInTouchComponent(): React.JSX.Element {
   return (
     <Container
+      as={motion.div}
+      variants={staggeredContainer(0.1, 0.1)}
+      viewport={{ once: true, amount: 0.25 }}
+      whileInView="show"
+      initial="hidden"
       maxWidth="75rem"
       width="full"
       marginX="auto"
@@ -16,6 +23,8 @@ export default function GetInTouchComponent(): React.JSX.Element {
     >
       {/* Get In Touch Box Container */}
       <Box
+        as={motion.div}
+        variants={slideInTransition("right", "tween", 0, 0.5)}
         backgroundColor="background"
         shadow="lg"
         borderRadius="0.5rem"
@@ -44,7 +53,8 @@ export default function GetInTouchComponent(): React.JSX.Element {
             marginBottom={{ base: 8, md: 0 }}
           >
             <Text
-              as="h4"
+              as={motion.h4}
+              variants={textVariantTransition(1)}
               fontWeight="light"
               lineHeight={5}
               fontSize={{ base: "1em", lg: "1.2em" }}
@@ -52,13 +62,15 @@ export default function GetInTouchComponent(): React.JSX.Element {
               Let&apos;s Talk
             </Text>
             <Text
-              as="h3"
+              as={motion.h3}
+              variants={textVariantTransition(1.1)}
               fontSize={{ base: "2em", lg: "2.3em" }}
             >
               About Your
             </Text>
             <Text
-              as="h2"
+              as={motion.h2}
+              variants={textVariantTransition(1.2)}
               fontWeight="bold"
               bgClip="text"
               opacity="0.9"
@@ -70,22 +82,27 @@ export default function GetInTouchComponent(): React.JSX.Element {
           </Box>
 
           {/* Get In Touch Button */}
-          <PrimaryButton
-            href="/#contact"
-            variant="solid"
-            paddingX="2.5rem"
-            paddingY="1.5rem"
-            borderWidth="2px"
-            borderColor="transparent"
-            rightIcon={<FaPaperPlane />}
-            _hover={{
-              backgroundColor: "transparent",
-              borderColor: "primary",
-              color: "primary",
-            }}
+          <Box
+            as={motion.div}
+            variants={fadeInTransition("up", "tween", 0, 1.3)}
           >
-            Get In Touch
-          </PrimaryButton>
+            <PrimaryButton
+              href="/#contact"
+              variant="solid"
+              paddingX="2.5rem"
+              paddingY="1.5rem"
+              borderWidth="2px"
+              borderColor="transparent"
+              rightIcon={<FaPaperPlane />}
+              _hover={{
+                backgroundColor: "transparent",
+                borderColor: "primary",
+                color: "primary",
+              }}
+            >
+              Get In Touch
+            </PrimaryButton>
+          </Box>
         </Flex>
       </Box>
     </Container>
