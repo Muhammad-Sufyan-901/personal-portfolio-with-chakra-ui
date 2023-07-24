@@ -135,7 +135,7 @@ function SkillsSectionComponent(): React.JSX.Element {
           {/* Skills Section Subtitle & Description */}
           <GridItem
             as={motion.div}
-            variants={fadeInTransition("up", "tween", 0.1, 1.1)}
+            variants={fadeInTransition("left", "tween", 0.1, 1.1)}
             order={{ base: 1, lg: 2 }}
           >
             <Flex
