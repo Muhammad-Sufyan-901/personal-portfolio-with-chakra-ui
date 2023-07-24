@@ -1,10 +1,11 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import { AbsoluteCenter, Box, Container, Divider, Flex, FormControl, FormErrorMessage, FormLabel, Grid, GridItem, Input, Text, Textarea } from "@chakra-ui/react";
 import { Formik, Form, Field, type FieldAttributes } from "formik";
 import { FaPaperPlane } from "react-icons/fa";
 import { SectionDescription, SectionSubtitle, SectionTitle, ContactCard, PrimaryButton } from "@/fragments";
 import { contactCardList } from "@/constants";
-import { sendEmail, validateFormSchema } from "@/utils";
+import { fadeInTransition, sendEmail, staggeredContainer, validateFormSchema } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
 import type { FormInitialValues } from "@/types";
 
@@ -29,9 +30,18 @@ function ContactSectionComponent(): React.JSX.Element {
       <SectionTitle title="Contact" />
 
       {/* Contact Section Content */}
-      <Container maxWidth={{ base: "container.lg", lg: "75rem" }}>
+      <Container
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true }}
+        whileInView="show"
+        initial="hidden"
+        maxWidth={{ base: "container.lg", lg: "75rem" }}
+      >
         {/* Contact Section Subtitle & Description */}
         <Flex
+          as={motion.div}
+          variants={fadeInTransition("up", "tween", 0.1, 1.1)}
           direction="column"
           rowGap={{ base: 3, lg: 5 }}
         >
@@ -49,7 +59,11 @@ function ContactSectionComponent(): React.JSX.Element {
         >
           {contactCardList.map(
             ({ title, contactVia, contactLink, cardIcon }, index): React.ReactNode => (
-              <GridItem key={`${title} - ${index}`}>
+              <GridItem
+                as={motion.div}
+                variants={fadeInTransition("up", "tween", index * 0.25, 1.1)}
+                key={`${title} - ${index}`}
+              >
                 <ContactCard
                   title={title}
                   contactVia={contactVia}
@@ -83,7 +97,7 @@ function ContactSectionComponent(): React.JSX.Element {
           onSubmit={sendEmail}
           validationSchema={validateFormSchema}
         >
-          {({ isSubmitting }): React.ReactNode => (
+          {({ isSubmitting, isValid }): React.ReactNode => (
             <Form>
               <Grid
                 templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
@@ -94,6 +108,8 @@ function ContactSectionComponent(): React.JSX.Element {
                 <Field name="first_name">
                   {({ field, form }: FieldAttributes<any>): React.ReactNode => (
                     <FormControl
+                      as={motion.div}
+                      variants={fadeInTransition("right", "tween", 0.1, 1)}
                       isInvalid={form.errors.first_name && form.touched.first_name}
                       isRequired
                     >
@@ -129,6 +145,8 @@ function ContactSectionComponent(): React.JSX.Element {
                 <Field name="last_name">
                   {({ field, form }: FieldAttributes<any>): React.ReactNode => (
                     <FormControl
+                      as={motion.div}
+                      variants={fadeInTransition("left", "tween", 0.2, 1)}
                       isInvalid={form.errors.last_name && form.touched.last_name}
                       isRequired
                     >
@@ -163,6 +181,8 @@ function ContactSectionComponent(): React.JSX.Element {
                 <Field name="email">
                   {({ field, form }: FieldAttributes<any>): React.ReactNode => (
                     <FormControl
+                      as={motion.div}
+                      variants={fadeInTransition("right", "tween", 0.1, 1)}
                       isInvalid={form.errors.email && form.touched.email}
                       isRequired
                     >
@@ -198,6 +218,8 @@ function ContactSectionComponent(): React.JSX.Element {
                 <Field name="subject">
                   {({ field, form }: FieldAttributes<any>): React.ReactNode => (
                     <FormControl
+                      as={motion.div}
+                      variants={fadeInTransition("left", "tween", 0.2, 1)}
                       isInvalid={form.errors.subject && form.touched.subject}
                       isRequired
                     >
@@ -231,6 +253,8 @@ function ContactSectionComponent(): React.JSX.Element {
               </Grid>
 
               <Box
+                as={motion.div}
+                variants={fadeInTransition("down", "tween", 0.3, 1)}
                 marginTop={6}
                 width={{ base: "90%", lg: "100%" }}
                 marginX={{ base: "auto", lg: 0 }}
@@ -278,6 +302,7 @@ function ContactSectionComponent(): React.JSX.Element {
                   type="submit"
                   rightIcon={<FaPaperPlane />}
                   isLoading={isSubmitting}
+                  isDisabled={!isValid}
                 >
                   Submit
                 </PrimaryButton>
