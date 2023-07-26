@@ -1,19 +1,20 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import { Link } from "@chakra-ui/next-js";
-import { Box, Container, Flex, Hide, Show, useColorMode, useDisclosure } from "@chakra-ui/react";
+import { Box, Container, Flex, Hide, Show, useColorMode, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { navigationLinkList, profileData } from "@/constants";
 import { ThemeToggleButton } from "@/fragments";
 import { staggeredContainer, fadeInTransition } from "@/utils";
-import { motion } from "framer-motion";
 import MobileHeaderComponent from "./MobileHeaderComponent";
 
 export default function HeaderComponent(): React.JSX.Element {
   const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
   const [activeNavigationLink, setActiveNavigationLink] = React.useState<string>("home");
-  const { colorMode, toggleColorMode } = useColorMode();
+  const [isLargerThanXL] = useMediaQuery("(min-width: 1280px)");
   const { isOpen, onClose, onOpen, onToggle } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   const { name } = profileData;
 
@@ -67,13 +68,26 @@ export default function HeaderComponent(): React.JSX.Element {
               href="/"
               color="primary"
               fontWeight="semibold"
-              fontSize={{ base: "lg", lg: "1.5rem" }}
+              fontSize={{ base: "2.5rem", xl: "1.5rem" }}
               _hover={{
                 textDecoration: "none",
               }}
             >
-              {name}
+              {isLargerThanXL ? name : "MS"}
             </Link>
+
+            {/* Theme Toggle Button (Small Devices) */}
+            <Hide above="xl">
+              <Flex
+                justifyContent="center"
+                alignItems="center"
+              >
+                <ThemeToggleButton
+                  colorMode={colorMode}
+                  toggleColorMode={toggleColorMode}
+                />
+              </Flex>
+            </Hide>
 
             {/* Header Navigation Link List (Laptop Devices Only) */}
             <Show above="xl">
@@ -106,7 +120,7 @@ export default function HeaderComponent(): React.JSX.Element {
               </Flex>
             </Show>
 
-            {/* Theme Toggle Button */}
+            {/* Theme Toggle Button (Large Devices) */}
             <Show above="xl">
               <Flex
                 justifyContent="center"
