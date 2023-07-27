@@ -53,7 +53,7 @@ export default function MobileHeaderComponent({ isOpen, onClose, activeHref, set
                   ({ title, href }, index): React.ReactNode => (
                     <Link
                       key={`#${title} - ${index}`}
-                      href={`#${href}`}
+                      href={`/#${href}`}
                       color={href === activeHref ? "primary" : "text"}
                       fontWeight="medium"
                       fontSize={{ base: "1rem", md: "1.25rem" }}
