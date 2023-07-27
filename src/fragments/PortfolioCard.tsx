@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Badge, Box, ButtonGroup, Card, CardBody, CardFooter, Flex, Heading, Image, Skeleton, Text, useColorMode, useDisclosure } from "@chakra-ui/react";
+import { Badge, Box, ButtonGroup, Card, CardBody, CardFooter, Center, Flex, Heading, Image, Link, Skeleton, Text, useColorMode, useDisclosure } from "@chakra-ui/react";
 import { BsArrowRightCircleFill, BsFillEyeFill } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 import { truncateList } from "@/utils";
 import PrimaryButton from "./PrimaryButton";
 import PortfolioModal from "./PortfolioModal";
@@ -35,7 +36,36 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
             overflow="hidden"
             borderWidth="1.5px"
             borderColor="secondary"
+            position="relative"
           >
+            <Box
+              height="full"
+              width="full"
+              position="absolute"
+              top="-100%"
+              left={0}
+              backgroundColor="rgba(255, 255, 255, 0.1)"
+              backdropFilter="blur(1.25rem)"
+              transition="all 300ms"
+              _groupHover={{
+                top: 0,
+              }}
+            >
+              <Center
+                height="full"
+                width="full"
+              >
+                <Link
+                  href={repositoryURL}
+                  target="_blank"
+                  padding={3}
+                  backgroundColor="card"
+                  borderRadius="50%"
+                >
+                  <FaGithub fontSize="1.5rem" />
+                </Link>
+              </Center>
+            </Box>
             <Image
               src={imageThumbnail}
               alt="Project Preview Thumbail"
@@ -45,9 +75,6 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
                 objectFit: "cover",
                 height: "100%",
                 width: "100%",
-              }}
-              _groupHover={{
-                transform: "scale(1.05)",
               }}
             />
           </Box>
