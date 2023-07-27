@@ -53,7 +53,7 @@ export default function HeaderComponent(): React.JSX.Element {
           width="100%"
           paddingX="1rem"
           maxWidth={{ sm: "40rem", md: "48rem", lg: "75rem", xl: "82rem", "2xl": "98rem" }}
-          height={{ base: isScrolled ? "calc(3rem + 1rem)" : "calc(4rem + 1rem)", md: isScrolled ? "calc(4rem + 1rem)" : "calc(5rem + 1rem)" }}
+          height={{ base: isScrolled ? "calc(3.5rem + 1rem)" : "calc(4.5rem + 1rem)", md: isScrolled ? "calc(4rem + 1rem)" : "calc(5rem + 1rem)" }}
           transition="all 300ms"
         >
           <Flex
