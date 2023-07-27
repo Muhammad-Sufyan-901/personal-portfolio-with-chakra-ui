@@ -1,7 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Link } from "@chakra-ui/next-js";
-import { Box, Container, Flex, Hide, Show, useColorMode, useDisclosure, useMediaQuery } from "@chakra-ui/react";
+import { Box, Container, Flex, Hide, Show, useColorMode, useDisclosure, useMediaQuery, Link } from "@chakra-ui/react";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { navigationLinkList, profileData } from "@/constants";
@@ -106,7 +105,6 @@ export default function HeaderComponent(): React.JSX.Element {
                       fontSize="1rem"
                       borderBottom="2px"
                       borderBottomColor={activeNavigationLink === href ? "primary" : "transparent"}
-                      scroll={false}
                       _hover={{
                         color: "primary",
                         textDecoration: "none",
