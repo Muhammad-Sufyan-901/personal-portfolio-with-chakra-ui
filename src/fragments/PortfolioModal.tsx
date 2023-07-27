@@ -89,7 +89,7 @@ export default function PortfolioModal({ title, imageThumbnail, description, rep
           </Flex>
 
           <Heading size="md">Description</Heading>
-          <Text>{description}</Text>
+          <Text fontSize={{ base: "0.9em", md: "1rem" }}>{description}</Text>
         </ModalBody>
 
         <ModalFooter
