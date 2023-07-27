@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "@chakra-ui/next-js";
-import { Show, Flex, useColorMode, Drawer, DrawerContent, DrawerCloseButton, DrawerBody, DrawerFooter, DrawerHeader } from "@chakra-ui/react";
+import { Show, Flex, Drawer, DrawerContent, DrawerCloseButton, DrawerBody, DrawerHeader } from "@chakra-ui/react";
 import { navigationLinkList } from "@/constants";
 
 type MobileHeaderComponentProps = {
