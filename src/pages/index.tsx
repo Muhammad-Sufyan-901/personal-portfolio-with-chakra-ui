@@ -1,6 +1,7 @@
 import * as React from "react";
-import dynamic, { LoaderComponent } from "next/dynamic";
+import dynamic, { type LoaderComponent } from "next/dynamic";
 import { Box } from "@chakra-ui/react";
+import { ScrollToTopButton } from "@/fragments";
 
 const HomeSectionComponent: React.ComponentType = dynamic((): LoaderComponent => import("@/components/HomeSectionComponent"));
 const AboutSectionComponent: React.ComponentType = dynamic((): LoaderComponent => import("@/components/AboutSectionComponent"));
@@ -17,6 +18,7 @@ export default function MainPage(): React.JSX.Element {
     <Box
       as="main"
       backgroundColor="background"
+      id="mainContainer"
     >
       <HomeSectionComponent />
       <AboutSectionComponent />
@@ -27,6 +29,7 @@ export default function MainPage(): React.JSX.Element {
       <GetInTouchComponent />
       <BlogSectionComponent />
       <ContactSectionComponent />
+      <ScrollToTopButton />
     </Box>
   );
 }

@@ -13,3 +13,4 @@ export { default as PortfolioCard } from "./PortfolioCard";
 export { default as PortfolioModal } from "./PortfolioModal";
 export { default as BlogCard } from "./BlogCard";
 export { default as ContactCard } from "./ContactCard";
+export { default as ScrollToTopButton } from "./ScrollToTopButton";
