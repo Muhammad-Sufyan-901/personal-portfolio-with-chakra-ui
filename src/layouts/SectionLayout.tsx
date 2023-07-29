@@ -18,7 +18,7 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
         position="relative"
       >
         {/* Section Social Media Links */}
-        <Show above="xl">
+        <Show breakpoint="(min-width: 88.75rem)">
           <Flex
             direction="column"
             position="absolute"
@@ -70,7 +70,7 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
         <MainSection {...props} />
 
         {/* Active Section Dots Navigations */}
-        <Show above="xl">
+        <Show breakpoint="(min-width: 80rem)">
           <Flex
             direction="column"
             position="absolute"
