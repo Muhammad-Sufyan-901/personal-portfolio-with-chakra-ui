@@ -5,7 +5,8 @@ import { Formik, Form, Field, type FieldAttributes } from "formik";
 import { FaPaperPlane } from "react-icons/fa";
 import { SectionDescription, SectionSubtitle, SectionTitle, ContactCard, PrimaryButton } from "@/fragments";
 import { contactCardList } from "@/constants";
-import { fadeInTransition, sendEmail, staggeredContainer, validateFormSchema } from "@/utils";
+import { fadeInTransition, staggeredContainer, validateFormSchema } from "@/utils";
+import { sendEmail } from "@/services";
 import SectionLayout from "@/layouts/SectionLayout";
 import type { FormInitialValues } from "@/types";
 
