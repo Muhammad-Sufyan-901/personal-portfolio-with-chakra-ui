@@ -87,7 +87,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                     gap={8}
                   >
                     {skillList.map(
-                      ({ skillIcon, title, level }, index): React.ReactNode => (
+                      ({ skillIcon, title, level, description }, index): React.ReactNode => (
                         <GridItem
                           as={motion.div}
                           variants={fadeInTransition("up", "tween", index * 0.1, 1.1)}
@@ -97,6 +97,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                             skillIcon={skillIcon}
                             title={title}
                             level={level}
+                            description={description}
                           />
                         </GridItem>
                       )
@@ -112,7 +113,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                     gap={8}
                   >
                     {toolsList.map(
-                      ({ skillIcon, title, level }, index): React.ReactNode => (
+                      ({ skillIcon, title, level, description }, index): React.ReactNode => (
                         <GridItem
                           as={motion.div}
                           variants={fadeInTransition("up", "tween", index * 0.1, 1.1)}
@@ -122,6 +123,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                             skillIcon={skillIcon}
                             title={title}
                             level={level}
+                            description={description}
                           />
                         </GridItem>
                       )
