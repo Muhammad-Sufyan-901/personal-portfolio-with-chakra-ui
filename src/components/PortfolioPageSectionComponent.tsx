@@ -11,6 +11,7 @@ function PortfolioPageSectionComponent(): React.JSX.Element {
   return (
     <Box
       as="section"
+      id="portfolio"
       paddingTop="10rem"
       paddingBottom="6rem"
       width="100vw"

@@ -11,6 +11,7 @@ function BlogPageSectionComponent(): React.JSX.Element {
   return (
     <Box
       as="section"
+      id="blog"
       paddingTop="10rem"
       paddingBottom="6rem"
       width="100vw"
