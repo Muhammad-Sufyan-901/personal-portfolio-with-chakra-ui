@@ -6,6 +6,7 @@ import { IoClose } from "react-icons/io5";
 import { navigationLinkList, profileData } from "@/constants";
 import { ThemeToggleButton } from "@/fragments";
 import { staggeredContainer, fadeInTransition } from "@/utils";
+import { useIntersectionObserver, useWindowOnEvent } from "@/hooks";
 import MobileHeaderComponent from "./MobileHeaderComponent";
 
 export default function HeaderComponent(): React.JSX.Element {
@@ -17,15 +18,13 @@ export default function HeaderComponent(): React.JSX.Element {
 
   const { name } = profileData;
 
-  const onClickHandleActiveNavigation = (link: string): void => {
-    setActiveNavigationLink(link);
-  };
+  useWindowOnEvent("scroll", (): void => {
+    window.scrollY > 50 ? setIsScrolled(true) : setIsScrolled(false);
+  });
 
-  React.useEffect((): void => {
-    window.addEventListener("scroll", (): void => {
-      window.scrollY > 50 ? setIsScrolled(true) : setIsScrolled(false);
-    });
-  }, []);
+  useIntersectionObserver((id: string) => {
+    setActiveNavigationLink(id);
+  });
 
   return (
     <React.Fragment>
@@ -109,7 +108,6 @@ export default function HeaderComponent(): React.JSX.Element {
                         color: "primary",
                         textDecoration: "none",
                       }}
-                      onClick={() => onClickHandleActiveNavigation(href)}
                     >
                       {title}
                     </Link>
@@ -159,7 +157,6 @@ export default function HeaderComponent(): React.JSX.Element {
         onOpen={onOpen}
         onClose={onClose}
         activeHref={activeNavigationLink}
-        setActiveHref={setActiveNavigationLink}
       />
     </React.Fragment>
   );

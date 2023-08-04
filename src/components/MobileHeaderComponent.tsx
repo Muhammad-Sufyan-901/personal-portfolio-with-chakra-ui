@@ -8,16 +8,9 @@ type MobileHeaderComponentProps = {
   onClose(): void;
   onOpen(): void;
   activeHref: string;
-  setActiveHref(href: string): void;
 };
 
-export default function MobileHeaderComponent({ isOpen, onClose, activeHref, setActiveHref }: MobileHeaderComponentProps): React.JSX.Element {
-  const handleSetActiveNavigationAndCloseNavigation = (href: string): void => {
-    setActiveHref(href);
-
-    onClose();
-  };
-
+export default function MobileHeaderComponent({ isOpen, onClose, activeHref }: MobileHeaderComponentProps): React.JSX.Element {
   return (
     <Show below="xl">
       {/* Mobile Header Navigation Overlay */}
@@ -61,7 +54,7 @@ export default function MobileHeaderComponent({ isOpen, onClose, activeHref, set
                         color: "primary",
                         textDecoration: "none",
                       }}
-                      onClick={() => handleSetActiveNavigationAndCloseNavigation(href)}
+                      onClick={onClose}
                     >
                       {title}
                     </Link>
