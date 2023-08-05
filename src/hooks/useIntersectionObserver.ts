@@ -1,26 +1,27 @@
 import * as React from "react";
 
 export function useIntersectionObserver(callback: Function): void {
-  React.useEffect((): (() => void) => {
+  React.useEffect((): VoidFunction => {
     const sections: NodeListOf<HTMLElement> = document.querySelectorAll("section");
+
     const observerOptions: IntersectionObserverInit = {
       rootMargin: "-50% 0px -50% 0px",
     };
 
-    const observer: IntersectionObserver = new IntersectionObserver((enteries: IntersectionObserverEntry[]) => {
+    const observer: IntersectionObserver = new IntersectionObserver((enteries: IntersectionObserverEntry[]): void => {
       enteries.forEach(({ target, isIntersecting }: IntersectionObserverEntry) => {
         if (isIntersecting) {
-          callback(target.id);
+          callback(target);
         }
       });
     }, observerOptions);
 
-    sections.forEach((section) => {
+    sections.forEach((section): void => {
       observer.observe(section);
     });
 
     return () => {
-      sections.forEach((section) => {
+      sections.forEach((section): void => {
         observer.unobserve(section);
       });
     };

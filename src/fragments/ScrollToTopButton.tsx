@@ -16,7 +16,7 @@ export default function ScrollToTopButton(): React.JSX.Element {
     });
   };
 
-  React.useEffect((): (() => void) => {
+  React.useEffect((): VoidFunction => {
     const trackSectionScrolling = (): void => {
       const mainContainer: HTMLElement = document.getElementById("mainContainer")!;
       const homeElement: HTMLElement = document.getElementById("home")!;
