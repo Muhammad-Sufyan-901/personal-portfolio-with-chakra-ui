@@ -11,8 +11,12 @@ export default function HeaderMetadata(): React.JSX.Element {
         content="width=device-width, initial-scale=1"
       />
       <meta
+        name="subject"
+        content="Muhammad sufyan, Frontend Website and Mobile Developer"
+      />
+      <meta
         name="description"
-        content="Hello, This is my personal portfolio that created using next.js and chakra UI"
+        content="Hello Everyone👋 I'am Muhammad Sufyan. A Frontend Developer and Mobile Developer from Indonesia. This is my personal portfolio website that created using Next.js and Chakra UI"
       />
       <meta
         name="author"
