@@ -22,7 +22,7 @@ export default function HeaderComponent(): React.JSX.Element {
     window.scrollY > 50 ? setIsScrolled(true) : setIsScrolled(false);
   });
 
-  useIntersectionObserver(({ id }: Element) => {
+  useIntersectionObserver(({ id }: Element): void => {
     setActiveNavigationLink(id);
   });
 

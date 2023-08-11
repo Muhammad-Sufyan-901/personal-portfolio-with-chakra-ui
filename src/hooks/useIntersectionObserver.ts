@@ -9,7 +9,7 @@ export function useIntersectionObserver(callback: Function): void {
     };
 
     const observer: IntersectionObserver = new IntersectionObserver((enteries: IntersectionObserverEntry[]): void => {
-      enteries.forEach(({ target, isIntersecting }: IntersectionObserverEntry) => {
+      enteries.forEach(({ target, isIntersecting }: IntersectionObserverEntry): void => {
         if (isIntersecting) {
           callback(target);
         }
