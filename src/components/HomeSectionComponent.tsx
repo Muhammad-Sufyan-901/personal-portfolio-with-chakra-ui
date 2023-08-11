@@ -33,7 +33,7 @@ function HomeSectionComponent(): React.JSX.Element {
         initial="hidden"
         maxWidth={{ base: "container.lg", xl: "75rem" }}
         paddingX={{ base: "4", xl: 0 }}
-        paddingTop="4rem"
+        paddingTop={{ base: "1rem", md: "2rem", lg: "4rem" }}
       >
         <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}>
           {/* Home Section Text Info Content */}
@@ -42,7 +42,7 @@ function HomeSectionComponent(): React.JSX.Element {
             variants={slideInTransition("left", "tween", 0.1, 1)}
             display="flex"
             flexDirection="column"
-            paddingY="4rem"
+            paddingY={{ base: "1rem", md: "2rem", lg: "4rem" }}
             alignItems={{ base: "center", lg: "start" }}
             textAlign={{ base: "center", lg: "start" }}
           >
@@ -53,7 +53,7 @@ function HomeSectionComponent(): React.JSX.Element {
               fontWeight="semibold"
               fontSize="1rem"
             >
-              Hello I&apos;am
+              Hi There👋
             </Text>
 
             <Text
