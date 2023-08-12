@@ -91,9 +91,21 @@ export const skillList: Skill[] = [
     level: "Basic",
     description: "Laravel is a PHP framework for building web applications with expressive, elegant syntax.",
   },
+  {
+    skillIcon: "/assets/svg/vite.svg",
+    title: "Vite",
+    level: "Basic",
+    description: "Vite is a front-end build tool that aims to provide a faster and leaner development experience for modern web projects.",
+  },
+  {
+    skillIcon: "/assets/svg/material ui.svg",
+    title: "Material UI",
+    level: "Basic",
+    description: "Material UI is a CSS framework that provides React components out-of-the-box and follows Google’s Material Design.",
+  },
 ];
 
-export const toolsList: Skill[] = [
+export const toolList: Skill[] = [
   {
     skillIcon: "/assets/svg/visual studio code.svg",
     title: "Visual Studio Code",
