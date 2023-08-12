@@ -51,7 +51,7 @@ export default function FooterComponent(): React.JSX.Element {
           fontWeight="medium"
           fontSize="1.4rem"
         >
-          {divisions[0]}
+          {divisions[0]}🧑‍💻
         </Text>
       </Flex>
 

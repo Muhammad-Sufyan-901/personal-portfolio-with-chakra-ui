@@ -38,8 +38,8 @@ function BlogSectionComponent(): React.JSX.Element {
           direction="column"
           rowGap={{ base: 3, lg: 5 }}
         >
-          <SectionSubtitle>Blog About Programming</SectionSubtitle>
-          <SectionDescription>There are some blog about programming that i create to add more insight and also to share knowledge</SectionDescription>
+          <SectionSubtitle>Blog About Coding📝</SectionSubtitle>
+          <SectionDescription>There are some blog about coding that i create to add more insight and also to share knowledge</SectionDescription>
         </Flex>
 
         {/* Blog Section Content Container */}

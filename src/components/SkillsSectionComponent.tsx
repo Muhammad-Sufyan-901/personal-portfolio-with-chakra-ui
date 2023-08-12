@@ -148,7 +148,7 @@ function SkillsSectionComponent(): React.JSX.Element {
               alignItems="center"
               rowGap={{ base: 3, lg: 5 }}
             >
-              <SectionSubtitle textAlign={{ lg: "end" }}>Tech Stack & Tools</SectionSubtitle>
+              <SectionSubtitle textAlign={{ lg: "end" }}>Tech Stack⚙️ & Tools🛠️</SectionSubtitle>
 
               <SectionDescription textAlign={{ base: "center", lg: "end" }}>There are some tech stack and tools that i&apos;ve learned and experienced</SectionDescription>
             </Flex>

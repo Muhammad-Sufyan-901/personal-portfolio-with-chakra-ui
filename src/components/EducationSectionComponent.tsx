@@ -47,7 +47,7 @@ function EducationSectionComponent(): React.JSX.Element {
               alignItems="center"
               rowGap={{ base: 3, lg: 5 }}
             >
-              <SectionSubtitle>Educations & Awards</SectionSubtitle>
+              <SectionSubtitle>Educations🎓 & Awards🏆</SectionSubtitle>
 
               <SectionDescription>There are some formal education & awards that i&apos;ve reached below</SectionDescription>
             </Flex>

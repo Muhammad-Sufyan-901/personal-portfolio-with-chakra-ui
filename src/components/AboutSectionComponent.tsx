@@ -9,7 +9,7 @@ import { fadeInTransition, staggeredContainer, textVariantTransition } from "@/u
 import SectionLayout from "@/layouts/SectionLayout";
 
 function AboutSectionComponent(): React.JSX.Element {
-  const { name, pictures, region, divisions, descriptions, experiences, CV } = profileData;
+  const { name, pictures, region, divisions, descriptions, experiences } = profileData;
 
   return (
     <Box
@@ -97,7 +97,7 @@ function AboutSectionComponent(): React.JSX.Element {
                   fontWeight="semibold"
                   fontSize={{ base: "1.75rem", lg: "2rem" }}
                 >
-                  Hello i&apos;am{" "}
+                  Hello👋 i&apos;am{" "}
                   <Text
                     as="span"
                     color="primary"
@@ -118,14 +118,14 @@ function AboutSectionComponent(): React.JSX.Element {
                     as="span"
                     color="primary"
                   >
-                    {divisions[0]}
+                    {divisions[0]}🧑‍💻
                   </Text>{" "}
                   based in{" "}
                   <Text
                     as="span"
                     color="primary"
                   >
-                    {region}
+                    {region}🌏
                   </Text>
                 </Text>
 

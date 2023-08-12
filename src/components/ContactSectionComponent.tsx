@@ -46,7 +46,7 @@ function ContactSectionComponent(): React.JSX.Element {
           direction="column"
           rowGap={{ base: 3, lg: 5 }}
         >
-          <SectionSubtitle>Feel Free To Contact Me</SectionSubtitle>
+          <SectionSubtitle>Feel Free To Contact Me📨</SectionSubtitle>
           <SectionDescription>I&apos;am always open to discussing product design, collaborating work or partnerships. Just contact me with this media below</SectionDescription>
         </Flex>
 
