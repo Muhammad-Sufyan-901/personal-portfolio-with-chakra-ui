@@ -85,6 +85,9 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                   label={title}
                   key={`#${title} - ${index}`}
                   placement="left"
+                  backgroundColor="background"
+                  color="text"
+                  hasArrow
                 >
                   <Link
                     href={`/#${href}`}
