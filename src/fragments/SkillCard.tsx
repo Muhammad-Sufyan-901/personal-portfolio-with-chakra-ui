@@ -10,6 +10,9 @@ export default function SkillCard({ skillIcon, title, level, description }: Skil
     <Tooltip
       placement="top"
       label={description}
+      backgroundColor="background"
+      color="text"
+      hasArrow
     >
       <Flex
         direction="column"
