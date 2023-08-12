@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Box, Container, Flex, Grid, GridItem, Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import { FaCode, FaPencilRuler } from "react-icons/fa";
 import { SectionDescription, SectionSubtitle, SectionTitle, SkillCard } from "@/fragments";
-import { skillList, toolsList } from "@/constants";
+import { skillList, toolList } from "@/constants";
 import { fadeInTransition, staggeredContainer } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
 
@@ -112,7 +112,7 @@ function SkillsSectionComponent(): React.JSX.Element {
                     justifyContent="center"
                     gap={8}
                   >
-                    {toolsList.map(
+                    {toolList.map(
                       ({ skillIcon, title, level, description }, index): React.ReactNode => (
                         <GridItem
                           as={motion.div}
