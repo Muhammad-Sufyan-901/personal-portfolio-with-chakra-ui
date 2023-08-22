@@ -40,8 +40,7 @@ export default function HeaderComponent(): React.JSX.Element {
         right={0}
         zIndex={100}
         position="fixed"
-        backdropFilter={{ base: "none", lg: isScrolled ? "blur(1.25rem)" : "none" }}
-        backgroundColor={{ base: isScrolled ? "background" : "transparent", lg: isScrolled ? "rgba(255, 255, 255, 0.1)" : "transparent" }}
+        backgroundColor={isScrolled ? "background" : "transparent"}
         transition="all 300ms"
       >
         {/* Header Container */}
