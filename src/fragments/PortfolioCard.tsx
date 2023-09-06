@@ -80,12 +80,15 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
           </Box>
 
           <Heading
+            as={Link}
+            href={livePreviewURL}
+            target="_blank"
             size="md"
             fontSize="1.5rem"
             transition="all 300ms"
-            cursor="pointer"
             _hover={{
               color: "primary",
+              textDecoration: "none",
             }}
           >
             {title}
