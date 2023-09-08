@@ -16,7 +16,7 @@ export const socialMediaList: SocialMedia[] = [
   },
   {
     SocialMediaIcon: FaTiktok,
-    link: "https://tiktok.com/@penggunaaplbiasa",
+    link: "https://tiktok.com/@sangpengejarskom",
   },
   {
     SocialMediaIcon: FaDiscord,
