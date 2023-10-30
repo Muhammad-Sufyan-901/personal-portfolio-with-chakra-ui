@@ -39,7 +39,7 @@ export default function SkillCard({ skillIcon, title, level, description }: Skil
         </Box>
 
         <Text
-          as="h6"
+          as="h5"
           fontWeight="semibold"
           fontSize={{ base: "0.9em", lg: "1em" }}
         >

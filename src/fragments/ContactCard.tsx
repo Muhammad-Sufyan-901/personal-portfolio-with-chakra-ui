@@ -17,6 +17,7 @@ export default function ContactCard({ title, contactVia, contactLink, cardIcon }
       borderBottomWidth="2px"
       borderBottomColor="primary"
       role="group"
+      aria-roledescription="group"
       transition="all 300ms"
       shadow="lg"
       _hover={{

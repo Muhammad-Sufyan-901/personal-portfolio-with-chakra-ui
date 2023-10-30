@@ -61,6 +61,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
                   padding={3}
                   backgroundColor="card"
                   borderRadius="50%"
+                  aria-label="Github Button"
                 >
                   <FaGithub fontSize="1.5rem" />
                 </Link>
