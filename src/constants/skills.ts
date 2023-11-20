@@ -40,13 +40,13 @@ export const skillList: Skill[] = [
   {
     skillIcon: "/assets/svg/typescript.svg",
     title: "TypeScript",
-    level: "Basic",
+    level: "Intermediate",
     description: "TypeScript is a programming language that builds on JavaScript.",
   },
   {
     skillIcon: "/assets/svg/react native.svg",
     title: "React Native",
-    level: "Basic",
+    level: "Intermediate",
     description: "React Native is a free and open-source framework for building mobile applications using React.",
   },
   {
@@ -64,7 +64,7 @@ export const skillList: Skill[] = [
   {
     skillIcon: "/assets/svg/php.svg",
     title: "PHP",
-    level: "Basic",
+    level: "Intermediate",
     description: "PHP is a server-side scripting language designed specifically for web development.",
   },
   {
@@ -88,7 +88,7 @@ export const skillList: Skill[] = [
   {
     skillIcon: "/assets/svg/laravel.svg",
     title: "Laravel",
-    level: "Basic",
+    level: "Intermediate",
     description: "Laravel is a PHP framework for building web applications with expressive, elegant syntax.",
   },
   {
