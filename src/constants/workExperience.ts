@@ -6,7 +6,7 @@ export const workExperienceList: WorkExperience[] = [
     companyName: "Global Digital Verse",
     years: "2023 - Present",
     jobStatus: "Full Time",
-    jobDescription: "Responsible for debugging on several websites such as FindDW, FinEvolution and responsible for creating the entire company profile website.",
+    jobDescription: "Responsible for creating several features found on websites such as FindDW, Optimus, Litani and many more and responsible for creating the entire company profile website.",
     techStack: ["/assets/svg/laravel.svg", "/assets/svg/bootstrap.svg", "/assets/svg/mysql.svg", "/assets/svg/php.svg"],
   },
   {
