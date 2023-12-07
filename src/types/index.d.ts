@@ -13,6 +13,7 @@ export * from "./workExperience";
 export * from "./portfolio";
 export * from "./techStack";
 export * from "./blog";
+export * from "./blogCategory";
 export * from "./author";
 export * from "./contactCard";
 export * from "./formInitialValues";

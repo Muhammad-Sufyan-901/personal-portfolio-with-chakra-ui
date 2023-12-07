@@ -1,43 +1,62 @@
 import * as React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { Box, Button, Center, Flex, Heading, Text } from "@chakra-ui/react";
-import { BsArrowRightCircleFill } from "react-icons/bs";
-import { getOneBlog } from "@/utils";
-import { PrimaryButton } from "@/fragments";
+import { Box } from "@chakra-ui/react";
+import { getOneBlog, getOtherBlog } from "@/utils";
+import { DetailBlogPageSectionComponent } from "@/components";
+import type { GetServerSideProps } from "next";
+import type { ParsedUrlQuery } from "querystring";
+import type { Blog } from "@/types";
 
-export default function BlogDetailPage(): React.JSX.Element {
-  const { query } = useRouter();
-  const { slug } = query;
-  const blog = getOneBlog(slug as string);
+export interface BlogDetailPageProps {
+  blog: Blog;
+  otherBlog: Blog[];
+}
 
+export default function BlogDetailPage({ blog, otherBlog }: BlogDetailPageProps): React.JSX.Element {
   return (
     <Box
       as="main"
       backgroundColor="background"
-      height="100vh"
     >
-      <Center height="full">
-        <Flex
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          rowGap={4}
-          textAlign="center"
-        >
-          <Heading size={{ base: "lg", lg: "2xl" }}>Coming Soon</Heading>
-          <Text maxWidth="90%">This pages is under development and will be ready for soon.</Text>
-          <Button
-            as={Link}
-            href="/#blog"
-            variant="solid"
-            rightIcon={<BsArrowRightCircleFill fontSize={20} />}
-            scroll
-          >
-            Back To Section
-          </Button>
-        </Flex>
-      </Center>
+      <DetailBlogPageSectionComponent
+        blog={blog}
+        otherBlog={otherBlog}
+      />
     </Box>
   );
 }
+
+export const getServerSideProps: GetServerSideProps<BlogDetailPageProps> = async ({ params }) => {
+  const { slug } = params as ParsedUrlQuery;
+  const { uploadedAt, ...restBlogProps } = getOneBlog(slug as string) as Blog;
+
+  const blog: Blog = {
+    ...restBlogProps,
+    uploadedAt: uploadedAt.toLocaleString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
+  };
+
+  const blogs: Blog[] = getOtherBlog(slug as string);
+
+  const otherBlog: Blog[] = blogs
+    .filter(({ slug: blogSlug }): boolean => blogSlug !== slug)
+    .map(
+      ({ uploadedAt, ...blog }): Blog => ({
+        ...blog,
+        uploadedAt: uploadedAt.toLocaleString("en-US", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        }),
+      })
+    );
+
+  return {
+    props: {
+      blog,
+      otherBlog,
+    },
+  };
+};

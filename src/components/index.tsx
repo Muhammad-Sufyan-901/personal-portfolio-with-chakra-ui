@@ -11,4 +11,5 @@ export { default as PortfolioPageSectionComponent } from "./PortfolioPageSection
 export { default as GetInTouchComponent } from "./GetInTouchComponent";
 export { default as BlogSectionComponent } from "./BlogSectionComponent";
 export { default as BlogPageSectionComponent } from "./BlogPageSectionComponent";
+export { default as DetailBlogPageSectionComponent } from "./DetailBlogPageSectionComponent";
 export { default as ContactSectionComponent } from "./ContactSectionComponent";

@@ -9,7 +9,7 @@ import type { Blog } from "@/types";
 type BlogCardProps = Blog;
 
 export default function BlogCard({ slug, title, description, thumbnailImage, categories, uploadedAt, author: { profileImage, name } }: BlogCardProps): React.JSX.Element {
-  const formattedUploadedAt: string = uploadedAt.toLocaleDateString("en-US", {
+  const formattedUploadedAt: string = uploadedAt.toLocaleString("en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -100,7 +100,7 @@ export default function BlogCard({ slug, title, description, thumbnailImage, cat
           color="secondary"
           noOfLines={2}
         >
-          {description}
+          {description[0]}
         </Text>
       </CardBody>
 

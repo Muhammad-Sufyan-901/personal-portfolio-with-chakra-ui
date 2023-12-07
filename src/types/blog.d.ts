@@ -4,9 +4,9 @@ import type { BlogCategory } from "./blogCategory";
 export interface Blog {
   title: string;
   slug: string;
-  description: string;
+  description: string[];
   thumbnailImage: string;
   categories: BlogCategory[];
-  uploadedAt: Date;
+  uploadedAt: Date | string;
   author: Author;
 }

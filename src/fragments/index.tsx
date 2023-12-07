@@ -14,3 +14,7 @@ export { default as PortfolioModal } from "./PortfolioModal";
 export { default as BlogCard } from "./BlogCard";
 export { default as ContactCard } from "./ContactCard";
 export { default as ScrollToTopButton } from "./ScrollToTopButton";
+export { default as CategoryTag } from "./CategoryTag";
+export { default as OtherBlogCard } from "./OtherBlogCard";
+export { default as ShareToSocialMedia } from "./ShareToSocialMedia";
+export { default as AuthorSocialMedia } from "./AuthorSocialMedia";
