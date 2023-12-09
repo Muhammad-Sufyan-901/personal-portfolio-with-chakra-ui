@@ -1,11 +1,12 @@
 import * as React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Container, Divider, Flex, Grid, GridItem, HStack, Heading, Image, Tag, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { primaryColor } from "@/styles";
 import { blogCategories, sharedSocialMediaList, socialMediaList } from "@/constants";
 import { AuthorSocialMedia, CategoryTag, OtherBlogCard, ShareToSocialMedia } from "@/fragments";
-import { truncateList } from "@/utils";
+import { fadeInTransition, staggeredContainer, truncateList } from "@/utils";
 import type { BlogDetailPageProps as DetailBlogPageSectionComponentProps } from "@/pages/blog/[slug]";
 import type { SocialMedia } from "@/types";
 
@@ -31,6 +32,11 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
     >
       {/* Detail Blog Page Section Container */}
       <Grid
+        as={motion.div}
+        variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true }}
+        whileInView="show"
+        initial="hidden"
         templateAreas={blogContainerTemplateAreas}
         gridTemplateColumns={{ base: "1fr", lg: "1fr 30%" }}
         gap={{ base: "0", lg: "12", xl: "16" }}
@@ -44,6 +50,8 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
             marginY={{ base: "4" }}
             color="secondary"
             fontWeight="medium"
+            as={motion.nav}
+            variants={fadeInTransition("up", "tween", 0, 1)}
           >
             {/* Detail Blog Page Section Link Breadcrumb */}
             <BreadcrumbItem>
@@ -70,12 +78,20 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
           </Breadcrumb>
 
           {/* Detail Blog Page Section Blog Title */}
-          <Heading marginY={{ base: "4" }}>{title}</Heading>
+          <Heading
+            marginY={{ base: "4" }}
+            as={motion.h1}
+            variants={fadeInTransition("up", "tween", 0.1, 1)}
+          >
+            {title}
+          </Heading>
 
           {/* Detail Blog Page Section Blog Upload Date */}
           <Flex
             alignItems="center"
             gap={2}
+            as={motion.div}
+            variants={fadeInTransition("up", "tween", 0.2, 1)}
           >
             <FaCalendarAlt color={color} />
             <Text color="secondary">{uploadedAt as string}</Text>
@@ -86,6 +102,8 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
             marginY={{ base: "8" }}
             borderRadius="lg"
             overflow="hidden"
+            as={motion.div}
+            variants={fadeInTransition("up", "tween", 0.3, 1)}
           >
             <Image
               src={thumbnailImage}
@@ -102,6 +120,8 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
                 key={index}
                 textAlign="justify"
                 marginY={6}
+                as={motion.p}
+                variants={fadeInTransition("up", "tween", 0.1 * index, 1)}
               >
                 {paragraph}
               </Text>
@@ -113,6 +133,8 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
             justifyContent="space-between"
             direction={{ base: "column", md: "row" }}
             marginY={{ base: 4, lg: 8, xl: 12 }}
+            as={motion.div}
+            variants={fadeInTransition("up", "tween", 0.4, 1)}
           >
             <Box>
               <Heading size="md">Tags</Heading>
@@ -169,7 +191,8 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
           paddingY="3rem"
           display={{ base: "none", lg: "block" }}
           height="fit-content"
-          as="aside"
+          as={motion.aside}
+          variants={fadeInTransition("left", "tween", 0, 1)}
         >
           {/* Detail Blog Page Section Other Blog */}
           <Heading size="md">Other Articles</Heading>
