@@ -60,19 +60,6 @@ export default function HeaderComponent(): React.JSX.Element {
             alignItems="center"
             justifyContent="space-between"
           >
-            {/* Header Logo */}
-            <Link
-              href="/"
-              color="primary"
-              fontWeight="semibold"
-              fontSize={{ base: "2.5rem", xl: "1.5rem" }}
-              _hover={{
-                textDecoration: "none",
-              }}
-            >
-              {isLargerThanXL ? name : "MS"}
-            </Link>
-
             {/* Theme Toggle Button (Small Devices) */}
             <Hide above="xl">
               <Flex
@@ -85,6 +72,19 @@ export default function HeaderComponent(): React.JSX.Element {
                 />
               </Flex>
             </Hide>
+
+            {/* Header Logo */}
+            <Link
+              href="/"
+              color="primary"
+              fontWeight="semibold"
+              fontSize={{ base: "2.5rem", xl: "1.5rem" }}
+              _hover={{
+                textDecoration: "none",
+              }}
+            >
+              {isLargerThanXL && name}
+            </Link>
 
             {/* Header Navigation Link List (Laptop Devices Only) */}
             <Show above="xl">
