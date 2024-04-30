@@ -8,7 +8,7 @@ import { fadeInTransition, staggeredContainer, textVariantTransition } from "@/u
 export default function FooterComponent(): React.JSX.Element {
   const { name, divisions } = profileData;
 
-  const footerCopyrightText: string = `© 2023 Created by ${name}. All right reserved`;
+  const footerCopyrightText: string = `© 2024 Created by ${name}. All right reserved`;
 
   return (
     <Flex

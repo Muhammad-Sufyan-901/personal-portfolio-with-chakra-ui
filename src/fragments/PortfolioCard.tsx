@@ -51,21 +51,23 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
                 top: 0,
               }}
             >
-              <Center
-                height="full"
-                width="full"
-              >
-                <Link
-                  href={repositoryURL}
-                  target="_blank"
-                  padding={3}
-                  backgroundColor="card"
-                  borderRadius="50%"
-                  aria-label="Github Button"
+              {!repositoryURL ? null : (
+                <Center
+                  height="full"
+                  width="full"
                 >
-                  <FaGithub fontSize="1.5rem" />
-                </Link>
-              </Center>
+                  <Link
+                    href={repositoryURL}
+                    target="_blank"
+                    padding={3}
+                    backgroundColor="card"
+                    borderRadius="50%"
+                    aria-label="Github Button"
+                  >
+                    <FaGithub fontSize="1.5rem" />
+                  </Link>
+                </Center>
+              )}
             </Box>
             <Image
               src={imageThumbnail}

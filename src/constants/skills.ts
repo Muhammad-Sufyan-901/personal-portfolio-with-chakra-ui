@@ -103,6 +103,24 @@ export const skillList: Skill[] = [
     level: "Basic",
     description: "Material UI is a CSS framework that provides React components out-of-the-box and follows Google’s Material Design.",
   },
+  {
+    skillIcon: "/assets/svg/flutter.svg",
+    title: "Flutter",
+    level: "Intermediate",
+    description: "Flutter is an open-source mobile application development framework created by Google. It enables developers to build natively compiled applications for mobile, web, and desktop platforms using a single codebase.",
+  },
+  {
+    skillIcon: "/assets/svg/dart.svg",
+    title: "Dart",
+    level: "Intermediate",
+    description: "Dart is a programming language developed by Google. It is used to build cross-platform applications.",
+  },
+  {
+    skillIcon: "/assets/svg/firebase.svg",
+    title: "Firebase",
+    level: "Basic",
+    description: "Firebase is a platform developed by Google. It is used to build web and mobile applications.",
+  },
 ];
 
 export const toolList: Skill[] = [

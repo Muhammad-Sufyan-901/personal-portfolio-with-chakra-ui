@@ -96,23 +96,25 @@ export default function PortfolioModal({ title, imageThumbnail, description, rep
           justifyContent="flex-start"
           columnGap={3}
         >
-          <Button
-            as="a"
-            href={repositoryURL}
-            colorScheme="white"
-            variant="outline"
-            borderWidth="2px"
-            target="_blank"
-            transition="all 300ms"
-            leftIcon={<BsGithub />}
-            borderColor={colorMode === "light" ? "black" : "white"}
-            _hover={{
-              backgroundColor: colorMode === "light" ? "black" : "white",
-              color: colorMode === "light" ? "white" : "black",
-            }}
-          >
-            Project Repository
-          </Button>
+          {!repositoryURL ? null : (
+            <Button
+              as="a"
+              href={repositoryURL}
+              colorScheme="white"
+              variant="outline"
+              borderWidth="2px"
+              target="_blank"
+              transition="all 300ms"
+              leftIcon={<BsGithub />}
+              borderColor={colorMode === "light" ? "black" : "white"}
+              _hover={{
+                backgroundColor: colorMode === "light" ? "black" : "white",
+                color: colorMode === "light" ? "white" : "black",
+              }}
+            >
+              Project Repository
+            </Button>
+          )}
           <Button
             onClick={onClose}
             variant="solid"

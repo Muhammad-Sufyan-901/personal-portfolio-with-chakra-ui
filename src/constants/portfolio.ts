@@ -2,6 +2,29 @@ import type { Portfolio } from "@/types";
 
 export const portfolioList: Portfolio[] = [
   {
+    title: "KHASS E-Ticketing",
+    imageThumbnail: "/assets/images/project-16.webp",
+    description:
+      "KHASS is an e-ticketing website for selling theater tickets and promoting theaters. It was created using Next JS, Tailwind, and Express JS with my team. This website allows users to discover and purchase tickets for various theater performances. KHASS showcases information about different theaters, their upcoming shows, ticket availability, pricing, and more. The website provides a convenient platform for theaters to promote their shows and engage with potential audience members. Overall, KHASS aims to connect theater-goers with show tickets in an intuitive online marketplace.",
+
+    livePreviewURL: "https://khass.my.id/",
+    repositoryURL: "",
+    techStack: [
+      {
+        tech: "Next JS",
+        logo: "/assets/svg/next js.svg",
+      },
+      {
+        tech: "Tailwind",
+        logo: "/assets/svg/tailwind.svg",
+      },
+      {
+        tech: "Express JS",
+        logo: "/assets/svg/express.svg",
+      },
+    ],
+  },
+  {
     title: "My Personal Portfolio",
     imageThumbnail: "/assets/images/project-01.webp",
     description:

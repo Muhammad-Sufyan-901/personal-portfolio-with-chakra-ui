@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Container, Divider, Flex, Grid, GridItem, HStack, Heading, Image, Tag, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Container, Divider, Flex, Grid, GridItem, HStack, Heading, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { primaryColor } from "@/styles";
 import { blogCategories, sharedSocialMediaList, socialMediaList } from "@/constants";
@@ -24,6 +24,7 @@ export default function DetailBlogPageSectionComponent({ blog, otherBlog }: Deta
   return (
     <Container
       as="section"
+      id="blog"
       maxWidth="80rem"
       height="full"
       paddingY={{ base: "24" }}
