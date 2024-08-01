@@ -139,15 +139,22 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
             </PrimaryButton>
             <PrimaryButton
               href={livePreviewURL}
-              variant="ghost"
+              variant={livePreviewURL === "" ? "solid" : "ghost"}
               target="_blank"
               paddingX={{ base: 2 }}
-              _hover={{
-                borderColor: "text",
-                backgroundColor: "text",
-                color: colorMode === "dark" ? "primary" : "white",
-              }}
+              backgroundColor={livePreviewURL === "" ? "gray.500" : "transparent"}
+              cursor={livePreviewURL === "" ? "not-allowed" : "pointer"}
+              _hover={
+                livePreviewURL === ""
+                  ? {}
+                  : {
+                      borderColor: "text",
+                      backgroundColor: "text",
+                      color: colorMode === "dark" ? "primary" : "white",
+                    }
+              }
               rightIcon={<BsFillEyeFill />}
+              disabled={livePreviewURL === "" ? true : false}
             >
               Preview
             </PrimaryButton>

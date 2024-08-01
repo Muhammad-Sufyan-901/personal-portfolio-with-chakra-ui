@@ -121,6 +121,12 @@ export const skillList: Skill[] = [
     level: "Basic",
     description: "Firebase is a platform developed by Google. It is used to build web and mobile applications.",
   },
+  {
+    skillIcon: "/assets/svg/vue.svg",
+    title: "Vue.js",
+    level: "Basic",
+    description: "Vue.js is a progressive JavaScript framework for building user interfaces, known for its simplicity and flexibility.",
+  },
 ];
 
 export const toolList: Skill[] = [

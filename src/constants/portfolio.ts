@@ -2,6 +2,32 @@ import type { Portfolio } from "@/types";
 
 export const portfolioList: Portfolio[] = [
   {
+    title: "KNA Landing Page",
+    imageThumbnail: "/assets/images/project-17.webp",
+    description:
+      "KNA (Keanu Abimanyu Construction) Landing Page is a website that I created using HTML, CSS, JS, and Tailwind. This website displays information about a construction company that operates in the field of construction, such as building, renovation, and maintenance services. This website also has portfolio, testimonial, and consultation features that make it easy for visitors to know the quality and excellence of this construction company.",
+    livePreviewURL: "",
+    repositoryURL: "",
+    techStack: [
+      {
+        tech: "HTML",
+        logo: "/assets/svg/html.svg",
+      },
+      {
+        tech: "CSS",
+        logo: "/assets/svg/css.svg",
+      },
+      {
+        tech: "Tailwind",
+        logo: "/assets/svg/tailwind.svg",
+      },
+      {
+        tech: "JavaScript",
+        logo: "/assets/svg/javascript.svg",
+      },
+    ],
+  },
+  {
     title: "KHASS E-Ticketing",
     imageThumbnail: "/assets/images/project-16.webp",
     description:
