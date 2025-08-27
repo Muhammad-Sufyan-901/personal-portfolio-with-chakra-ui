@@ -4,7 +4,7 @@ export const workExperienceList: WorkExperience[] = [
   {
     jobDesk: "Mobile Developer",
     companyName: "Global Digital Verse",
-    years: "February 2024 - Present",
+    years: "February 2024 - August 2025",
     jobStatus: "Full Time",
     jobDescription: "Responsible for creating whole mobile apps such as Tampang.com, Digital Salesman and many more. Responsible for creating whole user interface and integrate the API.",
     techStack: ["/assets/svg/flutter.svg", "/assets/svg/dart.svg", "/assets/svg/firebase.svg", "/assets/svg/react native.svg", "/assets/svg/typescript.svg"],
@@ -12,7 +12,7 @@ export const workExperienceList: WorkExperience[] = [
   {
     jobDesk: "Full Stack Web Developer",
     companyName: "Global Digital Verse",
-    years: "May 2023 - Present",
+    years: "May 2023 - August 2025",
     jobStatus: "Full Time",
     jobDescription: "Responsible for creating several features found on websites such as FindDW, Optimus, Litani and many more and responsible for creating the entire company profile website.",
     techStack: ["/assets/svg/laravel.svg", "/assets/svg/bootstrap.svg", "/assets/svg/mysql.svg", "/assets/svg/php.svg"],
